@@ -4,10 +4,10 @@
 %table#projects
   %thead
     %tr
-      %th{params[:sort] == "title" ? {:class => "hilite"} : {}, :id => "title_header"}= link_to "Task Title", projects_path(:sort => "title")
+      %th{:class => @title_header, :id => "title_header"}= link_to "Task Title", projects_path(:sort => "title")
       %th Task Details
       %th Assigned User
-      %th{params[:sort] == "due_date" ? {:class => "hilite"} : {}, :id => "due_date_header"}= link_to "Due Date", projects_path(:sort => "due_date")
+      %th{:class => @due_date_header, :id => "due_date_header"}= link_to "Due Date", projects_path(:sort => "due_date")
   %tbody
     - @projects.each do |project|
       %tr

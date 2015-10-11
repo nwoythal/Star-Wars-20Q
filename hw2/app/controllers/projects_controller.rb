@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
 
   def index
     #@projects = Project.order(sort_column + " " + sort_direction)
-    sort = params[:sort]||session[:sort]
+    sort = params[:sort] || session[:sort]
     if sort == 'title'
       order = {:order => :title}
       @title_header = 'hilite'
