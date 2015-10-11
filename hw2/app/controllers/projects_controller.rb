@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  helper_method :sort_column, :sort_direction
 
   def show
     id = params[:id] # retrieve project task ID from URI route
@@ -7,7 +8,16 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all
+    #@projects = Project.order(params[:sort])
+    sort = params[:sort]||session[:sort]
+    if sort == 'title'
+      order = {:order => :title}
+      @title_header = 'hilite'
+    elsif sort == 'due_date'
+      order = {:order => :due_date}
+      @due_date_header = 'hilite'
+    end
+    @projects = Project.order(params[:sort])
   end
 
   def new
