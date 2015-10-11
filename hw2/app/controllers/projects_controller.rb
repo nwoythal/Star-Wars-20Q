@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    #@projects = Project.order(params[:sort])
+    #@projects = Project.order(sort_column + " " + sort_direction)
     sort = params[:sort]||session[:sort]
     if sort == 'title'
       order = {:order => :title}
@@ -52,5 +52,10 @@ class ProjectsController < ApplicationController
       def project_params
         params.require(:project).permit(:title, :description, :extended_description, :user, :due_date)
       end
-
+      def sort_column
+        params[:sort] || "title"
+      end
+      def sort_direction
+        params[:direction] || "asc"
+      end
 end

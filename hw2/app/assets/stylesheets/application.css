@@ -45,6 +45,9 @@ table#projects th {
   font-weight: bold;
   background-color: #A8A8A8;
 }
+table#projects th.hilite {
+  background-color: yellow;
+}
 table#projects th, table#projects td {
   padding: 4px;
   text-align: left;
