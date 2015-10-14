@@ -1,17 +1,25 @@
 -#  This file is app/views/projects/index.html.haml
+-# :id and :class denotes required html id and class tags as requested by assignment
 %h1 All Project Tasks
+%tbody
+  = form_tag projects_path, :id => 'users_form', :method => :get do
+    Include:
+    - @all_users.each do |k, v|
+      = k
+      = check_box_tag "users[#{k}]", 1, v
+    = submit_tag 'Refresh', :id => 'users_submit'
 
 %table#projects
   %thead
     %tr
-      %th{:class => @title_header, :id => "title_header"}= link_to "Task Title", projects_path(:sort => "title")
+      %th{:class => @title_header, :id => 'title_header'}= link_to 'Task Title', projects_path(:sort => 'title')
       %th Task Details
       %th Assigned User
-      %th{:class => @due_date_header, :id => "due_date_header"}= link_to "Due Date", projects_path(:sort => "due_date")
+      %th{:class => @due_date_header, :id => 'due_date_header'}= link_to 'Due Date', projects_path(:sort => 'due_date')
   %tbody
     - @projects.each do |project|
       %tr
-        %td= project.title 
+        %td= project.title
         %td= link_to "More about #{project.title}", project_path(project)
         %td= project.user
         %td= project.due_date.to_formatted_s(:long)
