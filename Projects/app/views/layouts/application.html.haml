@@ -1,13 +1,13 @@
 !!! 5
 %html
   %head
-    %title Class Project Manager
+    %title 20 Questions
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
 
   %body
-    %h1.title Class Project Manager
+    %h1.title
     #main
       - if flash[:notice]
         #notice.message= flash[:notice]
