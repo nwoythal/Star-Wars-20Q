@@ -1,17 +1,25 @@
 <html>
 <head>
-  <h1>Pick a category from the buttons below!</h1>
+  <h1>Choose A Category</h1>
 </head>
 
 <body>
+  <div id=navbar>
+    <ul>
+      <li><a href="/welcome">Home</a></li>
+      <li><a href="/rules">Rules</a></li>
+    </ul>
+  </div>
   <p>
     Based off what the user picked on the welcome page, this page will route to the compguessing or userguessing index.
   </p>
   <p>
-    This will after the user has picked a category
+    This will after the user has picked a category 
+    <div id=button_holder>
+      <%=link_to "Star Wars",  {:action=>"index", :controller=>"compguessing", :thing=>"star_wars"},:class => 'button'%>
+      <%=link_to "Star Trek",  {:action=>"index", :controller=>"compguessing", :thing=>"star_trek"},:class => 'button'%>
+    </div>
   </p>
-  <%=link_to "Star Wars",  {:action=>"index", :controller=>"compguessing", :thing=>"star_wars"},:class => 'button'%>
-  <%=link_to "Star Trek",  {:action=>"index", :controller=>"compguessing", :thing=>"star_trek"},:class => 'button'%>
 </body>
 
 </html>

@@ -1,4 +1,19 @@
-
+html, body {
+    overflow-x: hidden;
+    padding-bottom: 4rem;
+    margin: 0px auto;
+    background: #E8E8E8; /* For actual viewing use: #E8E8E8 to debug use pretty much any other color*/
+}
+h1{
+    background-color: #0034D1;
+    height: 38px;
+    margin: 0px auto;
+    margin-top: auto;
+    padding-bottom: 1rem;
+    padding-left: .5rem;
+    color: #FCFCFC;
+    font-family: Verdana, sans-serif;
+}
 .button {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -12,5 +27,47 @@
     color: #FFF;
     padding: 8px 12px;
     text-decoration: none;
+    margin-left: .5rem;
+    margin-right: .5rem;
 }
-
+p{
+    width: 100%;
+    margin: 0 auto;
+    width: 70rem;
+    background: #E8E8E8;
+    padding: 1.5rem;
+    padding-bottom: 4rem;
+    color: #171717;
+    font-family: Verdana, sans-serif;
+}
+#button_holder{
+    width: 100%;
+    margin: 0 auto;
+    width: 70rem;
+    background: #E8E8E8;
+    padding: 1.5rem;
+    padding-bottom: 4rem;
+    color: #171717;
+    font-family: Verdana, sans-serif;
+}
+#navbar li{
+    display: inline;
+    margin: .5rem;
+    padding: 3px;
+    padding-left: 5px;
+    margin: 0px;
+}
+#navbar li:hover{
+    background-color: #171717;
+    color: #E8E8E8;
+}
+#navbar ul{
+    background-color: #C7C7C7;
+    margin: 0rem;
+    padding: 4px;
+    padding-left: 0px;
+}
+#navbar a{
+    text-decoration: none;
+    color: inherit;
+}
