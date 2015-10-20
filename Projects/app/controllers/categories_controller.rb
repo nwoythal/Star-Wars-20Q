@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
   def index
-    # all calls to the database must go through the bus class
+    @game_type = params[:game]
   end
 end

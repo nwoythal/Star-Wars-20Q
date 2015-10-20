@@ -3,22 +3,21 @@
   <h1>This is the Welcome and Pick page!!!</h1>
 </head>
 
-<p>
-  This link is only here to show you how button_to works
-</p>
-<p>
-  This page will have the welcome message and two buttons
-</p>
-<p>
-  one button that says pick and the other that says guess
-</p>
 <body>
-
-<%=link_to "Go to Categories",  categories_path(:thing => 'some_action'),:class => 'button', :id => 'title_header'%>
+  <div id=navbar> 
+    <ul> 
+      <li><a href="/welcome">Home</a></li> 
+      <li><a href="/rules">Rules</a></li> 
+    </ul> 
+  </div>
+<div id=button_holder> 
+    <%=link_to "Guess",  categories_path(:game=>"compguessing"),:class => 'button'%>
+    <%=link_to "Pick",  categories_path(:game=>"userguessing"),:class => 'button'%>
+</div>
 
 <!----
 Test Link. Store here for now if you want.
-<%=link_to "Go to Categories",  {:action=>"index", :controller=>"playagain", :thing=>"some_action"},:class => 'button', :id => 'title_header'%>
+<%=link_to "Pick",  {:action=>"index", :controller=>"playagain", :game=>"pick"},:class => 'button'%>
 --->
 
 </body>
