@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
     end
     @all_users = Project.getUsers
     @selected_users = params[:users] || session[:users] || {}
-    
+
     if @selected_users == {}
       @selected_users = Hash[@all_users.map {|user| [user, user]}]
     end
@@ -28,7 +28,7 @@ class ProjectsController < ApplicationController
     end
     @projects = Project.where(user: @selected_users.keys).order(ordering)
   end
-
+    
   def new
     # default: render 'new' template
   end

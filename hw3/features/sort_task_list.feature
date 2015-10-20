@@ -24,7 +24,9 @@ Background: tasks have been added to database
 Scenario: sort tasks alphabetically
   When I follow "Task Title"
   # your steps here
+  Then I should see "Add Mobile support" before "Add Site overview"
 
 Scenario: sort tasks in increasing order of due date
   When I follow "Due Date"
   # your steps here
+  Then I should see "Raid cookie jar" before "Add Mobile support"
