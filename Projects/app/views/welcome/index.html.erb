@@ -1,0 +1,22 @@
+<html>
+<head>
+  <h1>This is the Welcome and Pick page!!!</h1>
+</head>
+
+<p>
+  This link is only here to show you how button_to works
+</p>
+<p>
+  This page will have the welcome message and two buttons
+</p>
+<p>
+  one button that says pick and the other that says guess
+</p>
+<body>
+
+<%=button_to "Go to Categories", categories_path(:thing => 'some_action'),  :class => "button", :method => :get%>
+
+
+</body>
+
+</html>

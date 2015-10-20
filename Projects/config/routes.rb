@@ -1,7 +1,11 @@
 ProjectManager::Application.routes.draw do
 
-  resources :questions
-  root :to => redirect('/questions')
+  resources :playagain
+  resources :compguessing
+  resources :userguessing
+  resources :categories
+  resources :welcome
+  root :to => redirect('/welcome')
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
