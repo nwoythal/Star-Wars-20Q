@@ -12,8 +12,7 @@
 </p>
 
 <p> Would you like to play again? </p>
-<input type=button onClick="location.href='/welcome'" value="Yes Please!">
-<input type=button onClick="" value="No thank You">
+<%=link_to "Go to Categories",  {:action=>"index", :controller=>"welcome", :thing=>"some_action"},:class => 'button', :id => 'title_header'%>
 
 </body>
 
