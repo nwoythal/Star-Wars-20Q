@@ -4,6 +4,12 @@
 </head>
 
 <body>
+  <div id=navbar> 
+    <ul> 
+      <li><a href="/welcome">Home</a></li> 
+      <li><a href="#">Rules</a></li> 
+    </ul> 
+  </div>
 <p>
   Computer guesses: ****
 </p>
@@ -11,7 +17,7 @@
   You guessed correctly/wrongly!
 </p>
 
-<p> Would you like to play again? </p>
+<h2> Would you like to play again? </h2>
 <%=link_to "Play Again?",  {:action=>"index", :controller=>"welcome"},:class => 'button'%>
 
 </body>

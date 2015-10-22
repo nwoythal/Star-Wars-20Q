@@ -5,16 +5,25 @@ html, body {
     background: #E8E8E8; /* For actual viewing use: #E8E8E8 to debug use pretty much any other color*/
 }
 h1{
-    background-color: #0034D1;
+    text-align: center;
+    background-color: #333333;
     height: 38px;
     margin: 0px auto;
     margin-top: auto;
     padding-bottom: 1rem;
     padding-left: .5rem;
-    color: #FCFCFC;
+    color: #E6E6E6;
     font-family: Verdana, sans-serif;
 }
+h2 {
+    text-align: center;
+}
 .button {
+    display:block;
+    width:10%;
+    margin:0 auto;
+    position:relative;
+    text-align:center;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -23,18 +32,16 @@ h1{
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-    background: #4479BA;
-    color: #FFF;
+    background: #333333;
+    color: #E6E6E6;
     padding: 8px 12px;
     text-decoration: none;
-    margin-left: .5rem;
-    margin-right: .5rem;
 }
 p{
     width: 100%;
     margin: 0 auto;
     width: 70rem;
-    background: #E8E8E8;
+    background: #E6E6E6;
     padding: 1.5rem;
     padding-bottom: 4rem;
     color: #171717;
