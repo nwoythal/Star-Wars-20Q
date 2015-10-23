@@ -1,6 +1,6 @@
 <html>
 <head>
-  <h1>This is the Computer Guessing page!!!</h1>
+  <h1>Computers Question</h1>
 </head>
 
 <body>
@@ -10,14 +10,14 @@
       <li><a href="#">Rules</a></li> 
     </ul> 
   </div>
-<div class= 'center'>
-  <div class='box'>
-    <%= @question.answer_or_question.to_s%>
-  </div>
-</div>
+
+  <h2><%= @question.answer_or_question.to_s%></h2>
+
+
+
   <div id=button_holder> 
-    <%=link_to "Yes",  {:action=>"index",  :category=>"starwars", :node_number => @node_number},:class => 'button'%>
-    <%=link_to "No",  {:action=>"index",  :category=>"starwars"},:class => 'button'%>
+    <%=link_to "Yes",  {:action=>"index", :controller=> "compguessing",  :category=>"starwars", :node_number => (@node_number), :button_clicked => "yes"},:class => 'button'%>
+    <%=link_to "No",  {:action=>"index", :controller=> "compguessing", :category=>"starwars", :node_number => (@node_number), :button_clicked => "no"},:class => 'button'%>
   </div>
 
 </body>
