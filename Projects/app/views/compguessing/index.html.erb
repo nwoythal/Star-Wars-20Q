@@ -16,8 +16,8 @@
 
 
   <div id=button_holder> 
-    <%=link_to "Yes",  {:action=>"index", :controller=> "compguessing",  :category=>"starwars", :node_number => (@node_number), :button_clicked => "yes"},:class => 'button'%>
-    <%=link_to "No",  {:action=>"index", :controller=> "compguessing", :category=>"starwars", :node_number => (@node_number), :button_clicked => "no"},:class => 'button'%>
+    <%=link_to "Yes",  {:action=>"index", :controller=> "compguessing",  :category=>"#{@category}", :node_number => (@node_number), :button_clicked => "yes"},:class => 'button'%>
+    <%=link_to "No",  {:action=>"index", :controller=> "compguessing", :category=>"#{@category}", :node_number => (@node_number), :button_clicked => "no"},:class => 'button'%>
   </div>
 
 </body>
