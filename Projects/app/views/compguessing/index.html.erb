@@ -10,9 +10,16 @@
       <li><a href="#">Rules</a></li> 
     </ul> 
   </div>
-<comment>
-  This page is for when the computer is guessing
-</comment>
+<div class= 'center'>
+  <div class='box'>
+    <%= @question.answer_or_question.to_s%>
+  </div>
+</div>
+  <div id=button_holder> 
+    <%=link_to "Yes",  {:action=>"index",  :category=>"starwars", :node_number => @node_number},:class => 'button'%>
+    <%=link_to "No",  {:action=>"index",  :category=>"starwars"},:class => 'button'%>
+  </div>
+
 </body>
 
 </html>

@@ -16,7 +16,7 @@
   <p>
     This will after the user has picked a category 
     <div id=button_holder>
-      <%=link_to "Star Wars",  {:action=>"index", :controller=>"#{@game_type}", :category=>"starwars"},:class => 'button'%>
+      <%=link_to "Star Wars",  {:action=>"index", :controller=>"#{@game_type}", :category=>"starwars", :node_number=>1},:class => 'button'%>
       <%=link_to "Star Trek",  {:action=>"index", :controller=>"#{@game_type}", :category=>"startrek"},:class => 'button'%>
    </div>
   </p>

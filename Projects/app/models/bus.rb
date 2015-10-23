@@ -7,6 +7,20 @@ class Bus
   # case cagetory
   # when "starwars"
   # when "animals"
+    case category
+      when "starwars"
+        if node_number == 1
+          @question = Starwar.first
+          #what = question.what_am_i.to_s
+        else
+          @question = Starwar.find_by_node_number(node_number)
+          #what = question.what_am_i.to_s       
+        end
+      #break
+    end
+  end
+  def self.set_question_and_answer
+      
   end
   # same with this method
   def self.get_user_guess_info(category , node_number)
