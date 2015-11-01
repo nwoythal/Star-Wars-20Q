@@ -17,7 +17,7 @@ module NavigationHelpers
       when /^the (Categories )?page$/ then '/categories'
       when /^the (ComputersQuestion )?page$/ then '/compguessing'
       when /^the (PlayAgain )?page$/ then '/playagain'
-      when /^the (UsersQuestion )?page$/ then '/userguessing'
+      when /^the (UserQuestion )?page$/ then '/userguessing'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
