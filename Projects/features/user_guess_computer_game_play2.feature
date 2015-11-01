@@ -35,7 +35,7 @@ Scenario: User is on last question
   And I should see "Correct!"
   And I should see "Would you like to play again?"
 
-Secnario: User is in middle of game and guesses answer
+Scenario: User is in middle of game and guesses answer
   Given i am on the User Guessing page
   Given I have asked "5" questions
   Then I should see "Enter your question"
