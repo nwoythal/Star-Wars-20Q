@@ -43,6 +43,6 @@ Secnario: User is in middle of game and guesses answer
   And I fill in "Questions" with "Luke Skywalker"
   And I follow "Submit Answer"
   
-  then I should be on the PlayAgain page
+  Then I should be on the PlayAgain page
   And I should see "Correct!"
   And I should see "Would you like to play again?"
