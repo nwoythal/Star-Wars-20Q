@@ -1,0 +1,24 @@
+-# in app/views/projects/find_all_by_manager.html.haml
+
+%h1 Projects with same Manager: (#{@project.manager}) as #{@project.title}
+
+%table#projects
+  %thead
+    %tr
+      %th Task Title
+      %th Task Details
+      %th Manager
+      %th Assigned User
+      %th Due Date
+
+  %tbody
+    - @projects.each do |project|
+      %tr
+        %td= project.title 
+        %td= project.description
+        %td= project.manager
+        %td= project.user
+        %td= project.due_date.to_formatted_s(:long)
+
+= link_to 'Back to project task list', projects_path
+
