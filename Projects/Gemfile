@@ -14,13 +14,15 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails'
   gem 'thin'
-  gem 'guard'
-  gem 'guard-cucumber'
 end
 
 group :test do
-  gem 'cucumber-rails',                  :require => false
-  gem 'cucumber-rails-training-wheels'
+  gem 'simplecov'
+
+  gem 'cucumber-rails', :require => false
+  gem 'guard'
+  gem 'guard-cucumber'
+  gem 'guard-rspec'
 end
 
 group :production do

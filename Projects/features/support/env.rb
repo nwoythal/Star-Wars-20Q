@@ -6,6 +6,13 @@
 
 require 'cucumber/rails'
 
+require 'simplecov'
+SimpleCov.command_name 'Cucumber'
+require File.expand_path('../../../config/environment', __FILE__)
+require File.expand_path('../../../config/environments/test', __FILE__)
+Rails.application.eager_load!
+
+
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
 # selectors in your step definitions to use the XPath syntax.

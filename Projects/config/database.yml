@@ -1,5 +1,5 @@
 test: &test
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   database: myprojects_test
   pool: 5
@@ -7,7 +7,7 @@ test: &test
   password: password
 
 development: &development
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   database: myprojects_development
   pool: 5
