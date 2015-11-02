@@ -19,9 +19,7 @@ class Bus
       #break
     end
   end
-  def self.set_question_and_answer
-      
-  end
+
   # same with this method
   def self.get_user_guess_info(category , node_number)
 
