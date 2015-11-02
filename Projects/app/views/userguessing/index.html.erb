@@ -10,9 +10,11 @@
       <li><a href="#">Rules</a></li> 
     </ul> 
   </div>
-<comment>
-  This page is for when the user is guessing what the computer picked
-</comment>
+  <div id=button_holder>
+  <%=form_tag :controller => '/userguessing', :method => :get, :action => 'create'%>
+    <%= text_field_tag :ask, params[:ask], :id => 'ask_field', :placeholder => 'Ask me a question!', size: '50' %>
+    <%= submit_tag "Ask!", :name => nil, :class => 'button'%>
+  </div>
 </body>
 
 </html>
