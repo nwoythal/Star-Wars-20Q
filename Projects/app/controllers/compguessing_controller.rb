@@ -37,7 +37,4 @@ class CompguessingController < ApplicationController
     #@question, what = Bus.get_computer_guess_info(@category, 1)
   end
 
-  def yes_cond
-    @category = params[:category]
-  end
 end
