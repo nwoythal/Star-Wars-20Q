@@ -5,7 +5,6 @@ class UserguessingController < ApplicationController
   end
   
   def create #Named create because rails REALLY wants it to be
-    byebug
     redirect_to("/playagain?guess='#{params[:ask]}'") #string is stored in params[:ask]
   end
 end
