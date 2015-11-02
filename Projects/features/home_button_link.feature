@@ -20,8 +20,9 @@ And I should see "Home"
 And I follow "Home"
 Then I should be on the Welcome page
 
-Scenario: User is on the computer question page 
-Given I am on the ComputersQuestion page
+Scenario: User is on the computer question page
+Given I have already picked a category
+Then I should be on the ComputersQuestion page
 Then I should see "Computers Question"
 And I should see "Home"
 And I should see "Yes"
