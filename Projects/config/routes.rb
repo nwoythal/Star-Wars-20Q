@@ -6,8 +6,9 @@ ProjectManager::Application.routes.draw do
   resources :categories
   resources :welcome
   root :to => redirect('/welcome')
-  
-  match '/userguessing', :to => 'userguessing#ask', :via => 'post'
+
+  get '/userguessing/show', to: 'userguessing#show', as: :show
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

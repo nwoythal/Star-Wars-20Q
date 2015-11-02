@@ -7,4 +7,7 @@ class UserguessingController < ApplicationController
   def create #Named create because rails REALLY wants it to be
     redirect_to("/playagain?guess='#{params[:ask]}'") #string is stored in params[:ask]
   end
+  def show
+
+  end
 end
