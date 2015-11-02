@@ -1,0 +1,24 @@
+<html>
+<head>
+
+</head>
+
+<body>
+  <div id=navbar> 
+    <ul> 
+      <li><a href="/welcome">Home</a></li> 
+      <li><a href="#">Rules</a></li> 
+    </ul> 
+  </div>
+
+<h2>
+  Computer Guesses: <%="#{@answer}"%>
+</h2>
+
+
+<h2> Would you like to play again? </h2>
+<%=link_to "Play Again!",  {:action=>"index", :controller=>"welcome"},:class => 'button'%>
+
+</body>
+
+</html>

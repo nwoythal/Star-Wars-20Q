@@ -1,0 +1,25 @@
+<html>
+<head>
+  <h1>Computers Question</h1>
+</head>
+
+<body>
+  <div id=navbar> 
+    <ul> 
+      <li><a href="/welcome">Home</a></li> 
+      <li><a href="#">Rules</a></li> 
+    </ul> 
+  </div>
+
+  <h2><%= @question.answer_or_question.to_s%></h2>
+
+
+
+  <div id=button_holder> 
+    <%=link_to "Yes",  {:action=>"index", :controller=> "compguessing",  :category=>"#{@category}", :node_number => (@node_number), :button_clicked => "yes"},:class => 'button'%>
+    <%=link_to "No",  {:action=>"index", :controller=> "compguessing", :category=>"#{@category}", :node_number => (@node_number), :button_clicked => "no"},:class => 'button'%>
+  </div>
+
+</body>
+
+</html>

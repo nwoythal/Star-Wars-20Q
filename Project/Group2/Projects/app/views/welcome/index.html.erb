@@ -1,0 +1,21 @@
+<html>
+<head>
+  <h1>Welcome to Twenty Questions!</h1>
+</head>
+
+<body>
+  <div id=navbar> 
+    <ul> 
+      <li><a href="/welcome">Home</a></li> 
+      <li><a href="#">Rules</a></li> 
+    </ul> 
+  </div>
+  <h2>Would you like to pick an object, or guess mine?</h2>
+<div id=button_holder> 
+    <%=link_to "Pick an object",  categories_path(:game=>"compguessing"),:class => 'button'%>
+    <%=link_to "Guess your object",  categories_path(:game=>"userguessing"),:class => 'button'%>
+</div>
+
+</body>
+
+</html>

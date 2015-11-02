@@ -1,0 +1,24 @@
+<html>
+<head>
+  <h1>This is the User guessing page!!!</h1>
+</head>
+
+<body>
+  <div id=navbar> 
+    <ul> 
+      <li><a href="/welcome">Home</a></li> 
+      <li><a href="#">Rules</a></li> 
+    </ul> 
+  </div>
+  <div id=button_holder>
+  <%=form_tag :controller => '/userguessing', :method => :get, :action => 'create'%>
+    <%= text_field_tag :ask, params[:ask], :id => 'ask_field', :placeholder => 'Ask me a question!', size: '50' %>
+    <%= submit_tag "Ask!", :name => nil, :class => 'button'%>
+  </div>
+</body>
+<p>
+ <%= link_to 'ask page', show_path%>
+
+</p>
+
+</html>

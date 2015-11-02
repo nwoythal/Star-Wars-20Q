@@ -1,0 +1,21 @@
+<html>
+<head>
+  <h1>Choose A Category</h1>
+</head>
+
+<body>
+  <div id=navbar>
+    <ul>
+      <li><a href="/welcome">Home</a></li>
+      <li><a href="#">Rules</a></li>
+    </ul>
+  </div>
+
+    <div id=button_holder>
+      <%=link_to "Star Wars",  {:action=>"index", :controller=>"#{@game_type}", :category=>"starwars", :node_number => 0},:class => 'button'%>
+      <!--<%=link_to "Star Trek",  {:action=>"index", :controller=>"#{@game_type}", :category=>"startrek"},:class => 'button'%>-->
+   </div>
+
+</body>
+
+</html>
