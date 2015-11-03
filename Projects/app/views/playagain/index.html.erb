@@ -10,18 +10,18 @@
       <li><a href="#">Rules</a></li> 
     </ul> 
   </div>
-<%if params[:game]=="userguessing" %>
-  <h2>
-    Computer Guesses: <%="#{@answer}"%>
-  </h2>
-<%elsif params[:game]=="compguessing"%>
-  <h2>
-    The computer was thinking of <%="#{@answer}"%>
-  </h2>
-    <%if :guess==@answer %>
+<%if params[:game]=="compguessing" %>
+    <h2>
+      Computer Guesses: <%="#{@answer}"%>
+    </h2>
+<%elsif params[:game]=="userguessing"%>
+    <h2>
+      The computer was thinking of <%="#{@answer}"%>
+    </h2>
+    <%if params[:guess]==@answer %>
        <p>You guessed correctly!</p>
-    <% else %>
-       <p>Better luck next time.</p>
+    <% elsif !params[:guess].nil? %>
+       <p>Better luck next time.</p> <!--Why does this render?-->
     <%end%>
 <%end%>
 

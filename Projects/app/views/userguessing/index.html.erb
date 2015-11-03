@@ -10,17 +10,16 @@
       <li><a href="#">Rules</a></li> 
     </ul> 
   </div>
-  <p style="text-align: center;">You have <%="#{@counter}"%> guesses left.</p>
-  <%if @counter.to_i >= 0 %>
+  <%if @counter.to_i > 0 %>
+    <p style="text-align: center;">You have <%="#{@counter}"%> questions left.</p>
     <%=form_tag :controller => '/userguessing', :method => :get, :action => 'index'%>
     <%= text_field_tag :ask, params[:ask] ,:id => 'ask_field', :placeholder => 'Ask me a question!', size: '50' %>
     <%= submit_tag "Ask question", :name => nil, :class => 'button'%>
-
+    <h3 style="text-align: center">OR</h3>
   <% else %>
-    <p>Your count is up</p>
+    <p>You're out of questions.</p>
   <% end %>
   <%= hidden_field_tag(:guesses_left,"#{@counter}")%>
-  <h3 style="text-align: center">OR</h3>
   <%= link_to "Guess answer", show_path(), :class=>'button'%>
 </body>
 

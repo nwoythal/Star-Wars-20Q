@@ -8,7 +8,6 @@ class UserguessingController < ApplicationController
     elsif session[:guesses_left]<1
       redirect_to show_path()
     end
-    #redirect_to :action=>'index', :controller=> 'userguessing', session[:guesses_left] => @counter #does not re-render page, why?
   end
 
   def create #Here as an alias

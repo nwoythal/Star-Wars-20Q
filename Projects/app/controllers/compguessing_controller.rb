@@ -23,7 +23,7 @@ class CompguessingController < ApplicationController
       @category = params[:category]
       @question = Bus.get_computer_guess_info(@category, @node_number)
       if @question.what_am_i.to_s == 'Answer'
-        redirect_to :action=>"index", :controller=>"playagain", :answer => @question.answer_or_question.to_s
+        redirect_to :action=>"index", :controller=>"playagain", :answer => @question.answer_or_question.to_s, :game => 'compguessing'
       end
     end
 
