@@ -25,7 +25,7 @@ before :all do
 
     it 'should render the playagain page when node is an answer' do
       get :index, {:category => 'starwars', :node_number => @question2.node_number}
-      expect(response).to redirect_to '/playagain?answer=Obi+Wan'
+      expect(response).to redirect_to '/playagain?answer=Obi+Wan&game=compguessing'
     end
 
     it 'should grab new node based of a Yes answer' do
