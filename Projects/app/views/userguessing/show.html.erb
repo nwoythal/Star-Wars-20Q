@@ -2,4 +2,9 @@
 <head>
   <h1>This is the submit final answer page!!!</h1>
 </head>
+<body>
+<%=form_tag :controller => '/userguessing', :method => :get, :action => 'final_guess'%>
+<%= text_field_tag :guess, params[:guess] ,:id => 'ask_field', :placeholder => 'What am I thinking of?', size: '50' %>
+<%= submit_tag "Guess answer", :name => nil, :class => 'button'%>
+</body>
 </html>

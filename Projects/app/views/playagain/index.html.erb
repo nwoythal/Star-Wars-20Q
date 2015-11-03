@@ -4,16 +4,26 @@
 </head>
 
 <body>
-  <div id=navbar> 
+  <div id=navbar>
     <ul> 
       <li><a href="/welcome">Home</a></li> 
       <li><a href="#">Rules</a></li> 
     </ul> 
   </div>
-
-<h2>
-  Computer Guesses: <%="#{@answer}"%>
-</h2>
+<%if params[:game]=="userguessing" %>
+  <h2>
+    Computer Guesses: <%="#{@answer}"%>
+  </h2>
+<%elsif params[:game]=="compguessing"%>
+  <h2>
+    The computer was thinking of <%="#{@answer}"%>
+  </h2>
+    <%if :guess==@answer %>
+       <p>You guessed correctly!</p>
+    <% else %>
+       <p>Better luck next time.</p>
+    <%end%>
+<%end%>
 
 
 <h2> Would you like to play again? </h2>

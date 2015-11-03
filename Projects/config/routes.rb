@@ -8,6 +8,8 @@ ProjectManager::Application.routes.draw do
   root :to => redirect('/welcome')
 
   get '/userguessing/show', to: 'userguessing#show', as: :show
+  post'/userguessing/show/final_guess', to: 'userguessing#final_guess', as: :final_guess
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
