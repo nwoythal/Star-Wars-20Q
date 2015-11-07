@@ -154,13 +154,14 @@ p{
     color: #171717;
     font-family: Verdana, sans-serif;
     text-align: center;
-    background-image: url("starwarsbg.jpg");
+    //background-image: url("starwarsbg.jpg");
     height: 38px;
     margin: 0px auto;
     margin-top: auto;
     padding-bottom: 1rem;
     padding-left: .5rem;
-    color: #FFFF00;
+    //color: #FFFF00;
+    color: #333333
 
 }
 #button_holder{
