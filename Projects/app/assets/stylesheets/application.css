@@ -239,6 +239,10 @@ div.center
     z-index: 1002;
     overflow: auto;
 }
+#input{
+    display: table;
+    margin: 0 auto;
+}
 #input p{
     display: inline;
     vertical-align: middle;
@@ -246,5 +250,4 @@ div.center
 #input form{
     display: inline;
     vertical-align: middle;
-
 }
