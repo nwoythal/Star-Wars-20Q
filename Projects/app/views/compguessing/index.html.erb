@@ -7,7 +7,12 @@
   <div id=navbar> 
     <ul> 
       <li><a href="/welcome">Home</a></li> 
-      <li><a href="#">Rules</a></li> 
+      <li>
+        <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Rules</a>
+        <div id="light" class="white_content">Game rules go in here
+          <br> <br> <a href = "javascript:void(0)" style="color: red" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Click Here To Go Back</a></div>
+        <div id="fade" class="black_overlay"></div>
+      </li>
     </ul> 
   </div>
 
