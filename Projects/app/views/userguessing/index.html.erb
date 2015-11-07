@@ -15,6 +15,11 @@
       </li>
     </ul> 
   </div>
+
+  <%if @counter.to_i < 20 %>
+    <p>Correct!</p>
+  <% end %>
+  
   <%if @counter.to_i > 0 %>
     <br>
     <p style="text-align: center; color: red;">You have <%="#{@counter}"%> questions left.</p>    
