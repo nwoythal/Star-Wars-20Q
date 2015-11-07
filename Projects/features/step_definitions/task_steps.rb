@@ -55,3 +55,9 @@ Given /I have already played a game/ do
          And I follow "Yes"
         }
 end
+
+Given /I have moved passed the Welcome page/ do
+  steps %Q{
+        And I follow "Guess your object"
+        }
+end

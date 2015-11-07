@@ -22,4 +22,10 @@ describe UserguessingController do
     expect(@counter) == 20
     expect(session[:guesses_left]) == (@counter)
   end
+
+  it 'Should check re-route if guesses_left is equal to zero' do
+    get :index, {} ,{:guesses_left => 0}
+    expect(response).to redirect_to '/userguessing/show'
+  end
+
 end
