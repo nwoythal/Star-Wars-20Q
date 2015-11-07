@@ -15,4 +15,11 @@ describe UserguessingController do
     expect(@counter).to eq(nil)
     expect(session[:guesses_left]).to eq(nil)
   end
+  
+
+  it 'Should check for guesses_left to be nil and set to 20 if such' do
+    get :index, {:guesses_left => nil}
+    expect(@counter) == 20
+    expect(session[:guesses_left]) == (@counter)
+  end
 end
