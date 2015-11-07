@@ -121,12 +121,13 @@ h1{
 }
 h2 {
     text-align: center;
+    color: #0D0D0D;
+
 }
 .button {
     display:block;
-    width:10%;
-    margin: auto;
-    margin-bottom: 2px;
+    width:20%;
+    margin:0 auto;
     position:relative;
     text-align:center;
     -webkit-border-radius: 4px;
@@ -143,6 +144,7 @@ h2 {
     text-decoration: none;
 }
 p{
+
     width: 100%;
     margin: 0 auto;
     width: 70rem;
@@ -151,6 +153,15 @@ p{
     padding-bottom: 4rem;
     color: #171717;
     font-family: Verdana, sans-serif;
+    text-align: center;
+    background-image: url("starwarsbg.jpg");
+    height: 38px;
+    margin: 0px auto;
+    margin-top: auto;
+    padding-bottom: 1rem;
+    padding-left: .5rem;
+    color: #FFFF00;
+
 }
 #button_holder{
     width: 101%; /*Not 100% so it aligns correctly*/
@@ -159,6 +170,7 @@ p{
     padding: 1.5rem;
     color: #171717;
     font-family: Verdana, sans-serif;
+
 }
 #navbar li{
     display: inline;
@@ -181,6 +193,7 @@ p{
     text-decoration: none;
     color: inherit;
 }
+
 div.box
 {
     border: solid 1px #CCCCCC;
@@ -222,6 +235,15 @@ div.center
     border: 10px groove #f4f4f4;
     background-color: white;
     color: black;
-    z-index:1002;
+    z-index: 1002;
     overflow: auto;
+}
+#input p{
+    display: inline;
+    vertical-align: middle;
+}
+#input form{
+    display: inline;
+    vertical-align: middle;
+
 }
