@@ -1,6 +1,6 @@
 <html>
 <head>
-  <h1>This is the submit final answer page!!!</h1>
+  <h1>Submit Your Final Answer!!!</h1>
 </head>
 <body>
 <div id=navbar>
@@ -14,10 +14,12 @@
     </li>
   </ul>
 </div>
-<%=form_tag :controller => '/userguessing', :method => :get, :action => 'final_guess'%>\
+<%=form_tag :controller => '/userguessing', :method => :get, :action => 'final_guess'%>
 <div id=textField>
+  <br>
   <%= text_field_tag :guess, params[:guess] ,:id => 'ask_field', :placeholder => 'What am I thinking of?', size: '50' %>
 </div>
+<br>
 <%= submit_tag "Guess answer", :name => nil, :class => 'button'%>
 </body>
 </html>

@@ -61,3 +61,10 @@ Given /I have moved passed the Welcome page/ do
         And I follow "Guess your object"
         }
 end
+
+Given /I have moved passed beginning Pages/ do
+  steps %Q{
+        And I follow "Pick an object"
+        And I follow "Star Wars"
+        }
+end
