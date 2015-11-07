@@ -22,7 +22,7 @@ Scenario: The user plays a simple game
  And I should see "Star Wars"
  And I follow "Star Wars"
  Then I should be on the ComputersQuestion page
- And I should see "Are you a Person?"
+ And I should see "Are you a person?"
  And I follow "Yes"
  Then I should be on the PlayAgain page
  And I should see "Computer Guesses: Obi Wan"
@@ -30,7 +30,7 @@ Scenario: The user plays a simple game
 
 Scenario: The user plays another simple game
  Given I have already picked a category
- And I should see "Are you a Person?"
+ And I should see "Are you a person?"
  And I follow "No"
  Then I should be on the PlayAgain page
  And I should see "Computer Guesses: X-Wing"

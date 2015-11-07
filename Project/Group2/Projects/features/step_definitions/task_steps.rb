@@ -33,10 +33,10 @@ end
 
 And /I have already asked (.*) questions/ do |number|
   i = 1
-  while i <= 19 do
+  while (i <= number.to_i - 1) do
     steps %Q{
-             And I fill in "Enter your question" with "Are you Luke Skywalker?"
-             And I follow "Submit Question"
+             And I fill in "ask" with "Are you Luke Skywalker?"
+             And I press "Ask question"
           }
     i += 1
   end
@@ -51,7 +51,20 @@ Given /I have already played a game/ do
          And I should see "Star Wars"
          And I follow "Star Wars"
          Then I should be on the ComputersQuestion page
-         And I should see "Are you a Person?"
+         And I should see "Are you a person?"
          And I follow "Yes"
+        }
+end
+
+Given /I have moved passed the Welcome page/ do
+  steps %Q{
+        And I follow "Guess your object"
+        }
+end
+
+Given /I have moved passed beginning Pages/ do
+  steps %Q{
+        And I follow "Pick an object"
+        And I follow "Star Wars"
         }
 end

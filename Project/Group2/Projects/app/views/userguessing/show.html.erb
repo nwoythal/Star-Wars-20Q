@@ -1,5 +1,25 @@
 <html>
 <head>
-  <h1>This is the submit final answer page!!!</h1>
+  <h1>Submit Your Final Answer!!!</h1>
 </head>
+<body>
+<div id=navbar>
+  <ul>
+    <li><a href="/welcome">Home</a></li>
+    <li>
+      <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Rules</a>
+      <div id="light" class="white_content">Game rules go in here
+        <br> <br> <a href = "javascript:void(0)" style="color: red" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Click Here To Go Back</a></div>
+      <div id="fade" class="black_overlay"></div>
+    </li>
+  </ul>
+</div>
+<%=form_tag :controller => '/userguessing', :method => :get, :action => 'final_guess'%>
+<div id=textField>
+  <br>
+  <%= text_field_tag :guess, params[:guess] ,:id => 'ask_field', :placeholder => 'What am I thinking of?', size: '50' %>
+</div>
+<br>
+<%= submit_tag "Guess answer", :name => nil, :class => 'button'%>
+</body>
 </html>
