@@ -19,7 +19,14 @@ class UserguessingController < ApplicationController
   end
 
   def final_guess
-    redirect_to :action => 'index', :controller =>'playagain', :answer=> :ask, :game=>'compguessing'
+    guess = params[:guess]
+
+    if guess.to_s == 'Obi Wan'
+      valid = 'Correct!'
+    else
+      valid = 'Incorrect!'
+    end
+    redirect_to :action => 'index', :controller =>'playagain', :answer=> "Obi Wan", :game=>'userguessing', :guess => params[:guess], :valid => valid
   end
 
 end

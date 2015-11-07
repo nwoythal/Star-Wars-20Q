@@ -21,13 +21,15 @@
     </h2>
 <%elsif params[:game]=="userguessing"%>
     <h2>
-      The computer was thinking of <%="#{@answer}"%>
+      <%="#{@valid}"%>
     </h2>
-    <%if params[:guess]==@answer %>
-       <p>You guessed correctly!</p>
-    <% elsif !params[:guess].nil? %>
-       <p>Better luck next time.</p> <!--Why does this render?-->
-    <%end%>
+    <h2>
+      The computer was thinking of: <%="#{@answer}"%>
+    </h2>
+    <h2>
+      Your Guess: <%="#{@guess}"%>
+    </h2>
+
 <%end%>
 
 
