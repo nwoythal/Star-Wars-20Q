@@ -6,6 +6,18 @@ class CompguessingController < ApplicationController
       @node_number = 1
       session[:node_number] = @node_number
       redirect_to :action=>"index", :controller=> "compguessing",  :category=>"#{@category}", :node_number => @node_number
+    elsif (params[:category] == "questions") && (params[:button_clicked] == "no")
+      @category = params[:category]
+      @node_number = session[:node_number]
+      @node_number = @node_number = 1 + Integer(@node_number)
+      if @node_number > 16
+        @node_number = 1
+      end
+      redirect_to :action=>"index", :controller=> "compguessing",  :category=>"#{@category}", :node_number => @node_number
+    elsif (params[:category] == "questions") && (params[:button_clicked] == "yes")
+      @node_number = 1
+      @category = Bus.get_category(session[:node_number].to_s)
+      redirect_to :action=>"index", :controller=> "compguessing",  :category=>"#{@category}", :node_number => @node_number
     else
       if (params[:button_clicked].to_s == "yes") && (session[:node_number].to_s == params[:node_number].to_s)
         @category = params[:category]

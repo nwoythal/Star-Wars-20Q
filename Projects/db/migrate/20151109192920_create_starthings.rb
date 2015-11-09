@@ -1,7 +1,7 @@
-class CreateObjects < ActiveRecord::Migration
+class CreateStarthings < ActiveRecord::Migration
 
   def up
-    create_table :objects do |t|
+    create_table :starthings do |t|
       t.string :what_am_i
       t.text :answer_or_question
       t.integer :node_number
@@ -10,7 +10,7 @@ class CreateObjects < ActiveRecord::Migration
   end
 
   def down
-    drop_table :objects
+    drop_table :starthings
   end
 
 end

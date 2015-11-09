@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151109165034) do
+ActiveRecord::Schema.define(version: 20151109192920) do
 
   create_table "alives", force: :cascade do |t|
     t.string   "what_am_i"
@@ -85,22 +85,6 @@ ActiveRecord::Schema.define(version: 20151109165034) do
     t.datetime "updated_at"
   end
 
-  create_table "objects", force: :cascade do |t|
-    t.string   "what_am_i"
-    t.text     "answer_or_question"
-    t.integer  "node_number"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "persons", force: :cascade do |t|
-    t.string   "what_am_i"
-    t.text     "answer_or_question"
-    t.integer  "node_number"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "places", force: :cascade do |t|
     t.string   "what_am_i"
     t.text     "answer_or_question"
@@ -149,7 +133,15 @@ ActiveRecord::Schema.define(version: 20151109165034) do
     t.datetime "updated_at"
   end
 
-  create_table "starwars", force: :cascade do |t|
+  create_table "starobjects", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "starthings", force: :cascade do |t|
     t.string   "what_am_i"
     t.text     "answer_or_question"
     t.integer  "node_number"

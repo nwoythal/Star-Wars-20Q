@@ -1,16 +1,40 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+persons = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
 
-#This is a very incomplete list- features to be added: Logins, accessibility, tasks to be completed later, view of completed tasks, and sorting and filtering of all tasks
-starwars = [{:what_am_i => 'Question', :answer_or_question => 'Are you a person?', :node_number => 1},
-            {:what_am_i => 'Answer', :answer_or_question => 'Obi Wan', :node_number => 2},
-            {:what_am_i => 'Answer', :answer_or_question => 'X-Wing', :node_number => 3}
-           ]
+places = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+objects = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+alives = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+sentients = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+builts = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+animals = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+cyborgs = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+empires = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+rebels = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+universes = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+jedis = [{:what_am_i => 'Question', :answer_or_question => 'Are you a Male?', :node_number => 1},
+         {:what_am_i => 'Answer', :answer_or_question => 'Guy', :node_number => 2},
+         {:what_am_i => 'Answer', :answer_or_question => 'Girl', :node_number => 3}]
+
+siths = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+senators = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+weapons = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+clones = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+machines = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+
+moons = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
 
 questions = [{:what_am_i => 'Question', :answer_or_question => 'Are you a person?', :node_number => 1},
              {:what_am_i => 'Question', :answer_or_question => 'Is it a place?', :node_number => 2},
@@ -20,8 +44,8 @@ questions = [{:what_am_i => 'Question', :answer_or_question => 'Are you a person
              {:what_am_i => 'Question', :answer_or_question => 'Can it be built?', :node_number => 6},
              {:what_am_i => 'Question', :answer_or_question => 'Is it an animal?', :node_number => 7},
              {:what_am_i => 'Question', :answer_or_question => 'Is it a cyborg?', :node_number => 8},
-             {:what_am_i => 'Question', :answer_or_question => 'Is it Empire?', :node_number => 9},
-             {:what_am_i => 'Question', :answer_or_question => 'Is it Rebel?', :node_number => 10},
+             {:what_am_i => 'Question', :answer_or_question => 'Is it empire?', :node_number => 9},
+             {:what_am_i => 'Question', :answer_or_question => 'Is it rebel?', :node_number => 10},
              {:what_am_i => 'Question', :answer_or_question => 'Is it in the Star Wars books, TV shows or video games]?', :node_number => 11},
              {:what_am_i => 'Question', :answer_or_question => 'Is it a Jedi?', :node_number => 12},
              {:what_am_i => 'Question', :answer_or_question => 'Is it a Sith?', :node_number => 13},
@@ -32,8 +56,76 @@ questions = [{:what_am_i => 'Question', :answer_or_question => 'Are you a person
              {:what_am_i => 'Question', :answer_or_question => 'Is it larger than a moon?', :node_number => 18},
 ]
 
-starwars.each do |task|
-  Starwar.create!(task)
+persons.each do |task|
+  Starthing.create!(task)
+end
+
+places.each do |task|
+  Place.create!(task)
+end
+
+objects.each do |task|
+  Starobject.create!(task)
+end
+
+alives.each do |task|
+  Alive.create!(task)
+end
+
+sentients.each do |task|
+  Sentient.create!(task)
+end
+
+builts.each do |task|
+  Built.create!(task)
+end
+
+animals.each do |task|
+  Animal.create!(task)
+end
+
+cyborgs.each do |task|
+  Cyborg.create!(task)
+end
+
+empires.each do |task|
+  Empire.create!(task)
+end
+
+rebels.each do |task|
+  Rebel.create!(task)
+end
+
+universes.each do |task|
+  Universe.create!(task)
+end
+
+jedis.each do |task|
+  Jedi.create!(task)
+end
+
+siths.each do |task|
+  Sith.create!(task)
+end
+
+senators.each do |task|
+  Senator.create!(task)
+end
+
+weapons.each do |task|
+  Weapon.create!(task)
+end
+
+clones.each do |task|
+  Clone.create!(task)
+end
+
+machines.each do |task|
+  Machine.create!(task)
+end
+
+moons.each do |task|
+  Moon.create!(task)
 end
 
 questions.each do |task|
