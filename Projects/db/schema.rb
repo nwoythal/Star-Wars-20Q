@@ -11,9 +11,161 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151018150532) do
+ActiveRecord::Schema.define(version: 20151109165034) do
+
+  create_table "alives", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "animals", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "builts", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "clones", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cyborgs", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "empires", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jedis", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "machines", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "moons", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "objects", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "persons", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rebels", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "senators", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sentients", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "siths", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "starwars", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "universes", force: :cascade do |t|
+    t.string   "what_am_i"
+    t.text     "answer_or_question"
+    t.integer  "node_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "weapons", force: :cascade do |t|
     t.string   "what_am_i"
     t.text     "answer_or_question"
     t.integer  "node_number"

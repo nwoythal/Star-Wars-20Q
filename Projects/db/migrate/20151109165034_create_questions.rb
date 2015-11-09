@@ -1,7 +1,7 @@
-class CreateStarwars < ActiveRecord::Migration
+class CreateQuestions < ActiveRecord::Migration
 
   def up
-    create_table :starwars do |t|
+    create_table :questions do |t|
       t.string :what_am_i
       t.text :answer_or_question
       t.integer :node_number
@@ -10,7 +10,7 @@ class CreateStarwars < ActiveRecord::Migration
   end
 
   def down
-      drop_table :starwars
+    drop_table :questions
   end
 
 end
