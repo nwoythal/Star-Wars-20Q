@@ -1,0 +1,113 @@
+---
+:flog:
+  :total: 0
+  :average: 0
+  :method_containers: []
+:churn:
+  :changes:
+  - :file_path: Projects/coverage/index.html
+    :times_changed: 10
+  :class_churn:
+  - klass: &1
+      file: Projects/app/controllers/compguessing_controller.rb
+      klass: CompguessingController
+    times_changed: 1
+  - klass: &2
+      file: Projects/app/controllers/userguessing_controller.rb
+      klass: UserguessingController
+    times_changed: 1
+  - klass: &3
+      file: Projects/app/controllers/welcome_controller.rb
+      klass: WelcomeController
+    times_changed: 1
+  :method_churn:
+  - method: &4
+      file: Projects/app/controllers/compguessing_controller.rb
+      klass: CompguessingController
+      method: CompguessingController#index
+    times_changed: 1
+  - method: &5
+      file: Projects/app/controllers/userguessing_controller.rb
+      klass: UserguessingController
+      method: UserguessingController#index
+    times_changed: 1
+  - method: &6
+      file: Projects/app/controllers/welcome_controller.rb
+      klass: WelcomeController
+      method: WelcomeController#index
+    times_changed: 1
+  :changed_files:
+  - Projects/app/controllers/compguessing_controller.rb
+  - Projects/app/controllers/userguessing_controller.rb
+  - Projects/app/controllers/welcome_controller.rb
+  - Projects/app/views/playagain/index.html.erb
+  - Projects/app/views/userguessing/index.html.erb
+  - Projects/app/views/userguessing/show.html.erb
+  :changed_classes:
+  - *1
+  - *2
+  - *3
+  :changed_methods:
+  - *4
+  - *5
+  - *6
+:roodi:
+  :total:
+  - Checked 39 files
+  :problems:
+  - :file: "./Projects/app/models/bus.rb"
+    :line: '10'
+    :problem: Case statement is missing an else clause.
+  - :file: "./Projects/features/step_definitions/web_steps.rb"
+    :line: '165'
+    :problem: Block cyclomatic complexity is 6.  It should be 4 or less.
+:stats:
+  :codeLOC: 0
+  :testLOC: 0
+  :code_to_test_ratio: 0.0
+  :lines: []
+:saikuro:
+  :files: []
+  :classes: []
+  :methods: []
+:cane:
+  :total_violations: 1
+  :violations:
+    :documentation:
+    - :description: No README found
+:reek:
+  :matches: []
+:flay:
+  :total_score: '0'
+  :matches: []
+:hotspots:
+  files:
+  - location:
+      class_name: 
+      method_name: 
+      file_path: Projects/coverage/index.html
+      file_name: Projects/coverage/index.html
+      line_number: 
+      hash_key: '["Projects/coverage/index.html", nil, nil]'
+    details:
+      churn: detected high level of churn (changed 10 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: "./Projects/app/models/bus.rb"
+      file_name: "./Projects/app/models/bus.rb"
+      line_number: 
+      hash_key: '["./Projects/app/models/bus.rb", nil, nil]'
+    details:
+      roodi: found 1 design problems
+  - location:
+      class_name: 
+      method_name: 
+      file_path: "./Projects/features/step_definitions/web_steps.rb"
+      file_name: "./Projects/features/step_definitions/web_steps.rb"
+      line_number: 
+      hash_key: '["./Projects/features/step_definitions/web_steps.rb", nil, nil]'
+    details:
+      roodi: found 1 design problems
+  classes: []
+  methods: []

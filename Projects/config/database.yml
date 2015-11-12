@@ -1,0 +1,18 @@
+test: &test
+  adapter: sqlite3
+  encoding: unicode
+  database: myprojects_test
+  pool: 5
+  username: myapp
+  password: password
+
+development: &development
+  adapter: sqlite3
+  encoding: unicode
+  database: myprojects_development
+  pool: 5
+  username: myapp
+  password: password
+
+cucumber:
+  <<: *test
