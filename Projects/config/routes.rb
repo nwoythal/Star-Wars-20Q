@@ -3,7 +3,6 @@ ProjectManager::Application.routes.draw do
   resources :playagain
   resources :compguessing
   resources :userguessing
-  resources :categories
   resources :welcome
   root :to => redirect('/welcome')
 
