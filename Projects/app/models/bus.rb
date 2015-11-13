@@ -224,5 +224,27 @@ class Bus
         return "moon"
     end
   end
-
+  
+  #This doesn't work for now...
+  def self.Node_search(question, ansNode)
+    @prevnode=ansNode
+    currnode=(ansNode/2).floor
+    question=question.downcase.gsub(/[^0-9a-z]/i, '') #remove all non-alphanumeric chars (this includes spaces)
+    while question!=currnode.data.downcase.gsub(/[^0-9a-z]/i, '') && Node!=1
+      @prevnode=currnode
+      currnode=(currnode/2).floor
+    end
+    if question==currnode.data.downcase.gsub(/[^0-9a-z]/i, '')
+      if @prevnode-(2*currnode)==0
+        return true #Yes!
+      elsif @prevnode-(2*currnode)==1
+        return false #No!
+      end
+    end
+    return false #Node not found
+  end
+  
+  def self.grab_object()
+    return get_category(rand(19).to_s)
+  end
 end
