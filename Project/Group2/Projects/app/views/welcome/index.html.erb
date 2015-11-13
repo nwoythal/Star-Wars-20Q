@@ -9,7 +9,9 @@
       <li><a href="/welcome">Home</a></li>
       <li>
         <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Rules</a>
-        <div id="light" class="white_content">Rules 
+        <div id="light" class="white_content">Game 
+<br>
+<br>Game rules
 <br>
 <br>When you get onto the home page, you have two game style choices to pick from to play. 
 <br>
@@ -36,8 +38,8 @@
   </div>
   <h2>Would you like to pick an object, or guess mine?</h2>
 <div id=button_holder> 
-    <%=link_to "Pick an object",  categories_path(:game=>"compguessing"),:class => 'button'%>
-    <%=link_to "Guess your object",  categories_path(:game=>"userguessing"),:class => 'button'%>
+    <%=link_to "Pick an object",{:action=>"index", :controller=>"compguessing", :category=>"questions", :node_number => 0},:class => 'button'%>
+    <%=link_to "Guess your object",{:action=>"index", :controller=>"userguessing", :category=>"questions", :node_number => 0},:class => 'button'%>
 </div>
 
 </body>
