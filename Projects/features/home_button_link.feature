@@ -6,11 +6,15 @@ Feature: Home Page Button
 
 Background: tasks have been added to database
 
+  Given the database is set up:
+    | what_am_i | answer_or_question | node_number |
+    | Question  | Are you a Person?  | 1           |
+
   Given the following tasks exist:
-  | what_am_i | answer_or_question | node_number |
-  | Question  | Are you a Person?  | 1           |
-  | Answer    | Obi Wan            | 2           |
-  | Answer    | X-Wing             | 3           |
+    | what_am_i | answer_or_question | node_number |
+    | Question  | Are you a Male?    | 1           |
+    | Answer    | Obi Wan            | 2           |
+    | Answer    | Ahsoka Tano        | 3           |
 
   And  I am on the Welcome page
 
@@ -21,7 +25,7 @@ And I follow "Home"
 Then I should be on the Welcome page
 
 Scenario: User is on the computer question page
-Given I have already picked a category
+And I follow "Pick an object"
 Then I should be on the ComputersQuestion page
 Then I should see "Computers Question"
 And I should see "Home"
