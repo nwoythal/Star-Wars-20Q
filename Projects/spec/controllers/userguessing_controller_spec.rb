@@ -19,8 +19,12 @@ describe UserguessingController do
   end
 
   it 'Should check re-route if guesses_left is equal to zero' do
-   get :index, {} ,{:guesses_left => 0}
-   expect(response).to redirect_to '/userguessing/show'
+    get :index, {} ,{:guesses_left => 0}
+    expect(response).to redirect_to '/userguessing/show'
   end
 
+  it 'should check if usrguess_obj is nil and if it is, pick a random value' do
+    get :index, { :usrguess_obj => nil }
+    expect(session[:usrguess_obj]).not_to eq(nil)
+  end
 end
