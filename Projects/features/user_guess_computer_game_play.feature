@@ -17,11 +17,6 @@ Feature: Allow user to ask a questions so they can guess the computers person, p
   Scenario: User plays a new game
     Then I should see "Welcome to Twenty Questions!"
     And I follow "Guess your object"
-
-    Then I should be on the Categories page
-    And I should see "Star Wars"
-    And I follow "Star Wars"
-
     Then I should be on the UserQuestion page
     And I should see "Enter your question"
     And I fill in "ask" with "Are you a Jedi?"
@@ -29,10 +24,9 @@ Feature: Allow user to ask a questions so they can guess the computers person, p
     And I should see "You have 19 questions left."
 
   Scenario: User is on last question
-    Given I have already picked the StarWars category
+    And I follow "Guess your object"
     And I have already asked "20" questions
     Then I should be on the UserQuestion page
-
     And I follow "Guess answer"
     And I fill in "guess" with "Luke Skywalker?"
     And I press "Guess answer"
@@ -41,7 +35,7 @@ Feature: Allow user to ask a questions so they can guess the computers person, p
     And I should see "Would you like to play again?"
 
   Scenario: User is in middle of game and guesses answer
-    Given I have already picked the StarWars category
+    And I follow "Guess your object"
     Given I am on the UserQuestion page
     And I have already asked 5 questions
 
@@ -50,11 +44,4 @@ Feature: Allow user to ask a questions so they can guess the computers person, p
     Then I follow "Guess answer"
     And I fill in "guess" with "Obi Wan?"
     And I press "Guess answer"
-
     Then I should be on the PlayAgain page
-
-  Scenario: The user has already played a game and wants to play again
-    Given I have already played a game
-    And I should be on the PlayAgain page
-    And I follow "Play Again!"
-    Then I should be on the Welcome page
