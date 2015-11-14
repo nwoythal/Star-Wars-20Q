@@ -14,7 +14,6 @@ module NavigationHelpers
     case page_name
 
       when /^the (Welcome )?page$/ then '/welcome'
-      when /^the (Categories )?page$/ then '/categories'
       when /^the (ComputersQuestion )?page$/ then '/compguessing'
       when /^the (PlayAgain )?page$/ then '/playagain'
       when /^the (UserQuestion )?page$/ then '/userguessing'
