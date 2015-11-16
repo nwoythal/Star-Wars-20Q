@@ -99,7 +99,24 @@ clones = [{:what_am_i => 'Question', :answer_or_question => 'Was this Clone a Co
           {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Waxer', :node_number => 127}
          ]
 
-machines = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+machines = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Spacecraft?', :node_number => 1},
+            {:what_am_i => 'Question', :answer_or_question => 'Is it used by the Military?', :node_number => 2},
+            {:what_am_i => 'Question', :answer_or_question => 'Is it used for cargo transport?', :node_number => 4},
+            {:what_am_i => 'Question', :answer_or_question => 'Is it used for cargo transport?', :node_number => 5},
+            {:what_am_i => 'Question', :answer_or_question => 'Does it have a complement of fighters?', :node_number => 8},
+            {:what_am_i => 'Question', :answer_or_question => 'Is it used for personnel transport?', :node_number => 9},
+            {:what_am_i => 'Question', :answer_or_question => 'Is it used for personnel transport?', :node_number => 10},
+            {:what_am_i => 'Question', :answer_or_question => 'Is it someones personal vehicle?', :node_number => 11},
+            {:what_am_i => 'Question', :answer_or_question => 'Is it a cruiser class ship?', :node_number => 16},
+            {:what_am_i => 'Question', :answer_or_question => 'Can it carry several thousand soldiers?', :node_number => 17},
+            {:what_am_i => 'Question', :answer_or_question => 'Is it a diplomatic ship?', :node_number => 18},
+            {:what_am_i => 'Question', :answer_or_question => 'Is it a fighter?', :node_number => 19},
+            {:what_am_i => 'Question', :answer_or_question => 'Is it someones personal vehicle?', :node_number => 20},
+            {:what_am_i => 'Answer', :answer_or_question => 'Millennium Falcon', :node_number => 21},
+            {:what_am_i => 'Question', :answer_or_question => 'Does it have a crew of two or more?', :node_number => 22},
+            {:what_am_i => 'Question', :answer_or_question => 'Does it have weapons?', :node_number => 23},
+
+           ]
 
 moons = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
 
