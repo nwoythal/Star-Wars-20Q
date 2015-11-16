@@ -56,7 +56,48 @@ senators = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number 
 
 weapons = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
 
-clones = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+clones = [{:what_am_i => 'Question', :answer_or_question => 'Was this Clone a Commander in the Republic Army?', :node_number => 1},
+          {:what_am_i => 'Question', :answer_or_question => 'Was this Clone the leader of the 212th Attack Battalion?', :node_number => 2},
+          {:what_am_i => 'Answer', :answer_or_question => 'Commander Cody', :node_number => 4},
+          {:what_am_i => 'Question', :answer_or_question => 'Did this Clone protect Jedi Master Ima-Gun Di?', :node_number => 5},
+          {:what_am_i => 'Answer', :answer_or_question => 'Commander Keeli', :node_number => 10},
+          {:what_am_i => 'Question', :answer_or_question => 'Was this Clone killed by Asajj Ventress?', :node_number => 11},
+          {:what_am_i => 'Answer', :answer_or_question => 'Commander Colt', :node_number => 22},
+          {:what_am_i => 'Question', :answer_or_question => 'Did this Clone kill Jedi Master Ki Adi Mundi in Order 66?', :node_number => 23},
+          {:what_am_i => 'Answer', :answer_or_question => 'Commander Bacara', :node_number => 46},
+          {:what_am_i => 'Question', :answer_or_question => 'Did this Clone Kill Jedi Master Secura in Order 66?', :node_number => 47},
+          {:what_am_i => 'Answer', :answer_or_question => 'Commander Bly', :node_number => 94},
+          {:what_am_i => 'Question', :answer_or_question => 'Was this Clone in charge of security at the Judiciary Central Detetion Center?', :node_number => 95},
+          {:what_am_i => 'Answer', :answer_or_question => 'Commander Fox', :node_number => 190},
+          {:what_am_i => 'Question', :answer_or_question => 'Was this Clone the leader of the 91st Reconnaissance Corps?', :node_number => 191},
+          {:what_am_i => 'Answer', :answer_or_question => 'Commander Neyo', :node_number => 382},
+          {:what_am_i => 'Answer', :answer_or_question => 'Commander Stone', :node_number => 383},
+          {:what_am_i => 'Question', :answer_or_question => 'Was this Clone a Captain in the Republic Army?', :node_number => 3},
+          {:what_am_i => 'Question', :answer_or_question => 'Was this Clone the leader of the 501st Legion?', :node_number => 6},
+          {:what_am_i => 'Answer', :answer_or_question => 'Captain Rex', :node_number => 12},
+          {:what_am_i => 'Answer', :answer_or_question => 'Captain Gregor', :node_number => 13},
+          {:what_am_i => 'Question', :answer_or_question => 'Was this Clone apart of the Domino Squad?', :node_number => 7},
+          {:what_am_i => 'Question', :answer_or_question => 'Was this Clone a heavy weapons expert?', :node_number => 14},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Hevy', :node_number => 28},
+          {:what_am_i => 'Question', :answer_or_question => 'Was this Clone killed while trying to rescue Jedi Master Even Piell?', :node_number => 29},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Echo', :node_number => 58},
+          {:what_am_i => 'Question', :answer_or_question => 'Did this clone figure out the true plan of Order 66?', :node_number => 59},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Fives', :node_number => 118},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Droidbait', :node_number => 119},
+          {:what_am_i => 'Question', :answer_or_question => 'Was this Clone deemed unfit for service?', :node_number => 15},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone Janitor 99', :node_number => 30},
+          {:what_am_i => 'Question', :answer_or_question => 'Was this Clone apart of the 501st Legion?', :node_number => 31},
+          {:what_am_i => 'Question', :answer_or_question => 'Did this Clone have a malfunctioning inhibitor chip?', :node_number => 62},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Tup', :node_number => 124},
+          {:what_am_i => 'Question', :answer_or_question => 'Did this Clone kill General Krell?', :node_number => 125},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Dogma', :node_number => 250},
+          {:what_am_i => 'Question', :answer_or_question => 'Did this Clone become the leader of the 501st Legion after the Clone Wars?', :node_number => 251},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone ARC Trooper Appo', :node_number => 502},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Jesse', :node_number => 503},
+          {:what_am_i => 'Question', :answer_or_question => 'Was this Clone known for his Mustache?', :node_number => 63},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Boil', :node_number => 126},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Waxer', :node_number => 127}
+         ]
 
 machines = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
 
