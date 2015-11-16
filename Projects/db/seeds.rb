@@ -1,4 +1,6 @@
-persons = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+persons = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Jedi?', :node_number => 1},
+           {:what_am_i => 'Redirect', :answer_or_question => 12, :node_number => 2},
+            {:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 3}]
 
 places = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
 
