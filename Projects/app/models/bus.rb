@@ -120,14 +120,6 @@ class Bus
           @question = Rebel.find_by_node_number(node_number)
           #what = question.what_am_i.to_s
         end
-      when "universe"
-        if node_number == 1
-          @question = Universe.first
-          #what = question.what_am_i.to_s
-        else
-          @question = Universe.find_by_node_number(node_number)
-          #what = question.what_am_i.to_s
-        end
       when "sith"
         if node_number == 1
           @question = Sith.first
@@ -207,20 +199,18 @@ class Bus
       when "10"
         return "rebel"
       when "11"
-        return "universe"
-      when "12"
         return "jedi"
-      when "13"
+      when "12"
         return "sith"
-      when "14"
+      when "13"
         return "senator"
-      when "15"
+      when "14"
         return "weapon"
-      when "16"
+      when "15"
         return "clone"
-      when "17"
+      when "16"
         return "machine"
-      when "18"
+      when "17"
         return "moon"
     end
   end 
