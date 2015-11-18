@@ -36,10 +36,11 @@
     <h2>
       Computer Guesses: <%="#{@answer}"%>
     </h2>
-    <!-- Leave this here please -Colton -->
-    <!--<h2>-->
-      <!--<%= image_tag("obiwan.jpg", :alt => "rss feed") %>-->
-    <!--</h2>-->
+    <%if params[:pic]!="empty" %>
+        <h2>
+         <%= image_tag("#{params[:pic]}.jpg", :alt => "rss feed") %>
+        </h2>
+    <%end%>
 
 <%elsif params[:game]=="userguessing"%>
     <h2>

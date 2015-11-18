@@ -39,7 +39,8 @@ class CompguessingController < ApplicationController
         redirect_to :action=>"index", :controller=> "compguessing", :category=>"questions", :button_clicked => "yes"
       end
       if @question.what_am_i.to_s == 'Answer'
-        redirect_to :action=>"index", :controller=>"playagain", :answer => @question.answer_or_question.to_s, :game => 'compguessing'
+        @pic = Bus.get_pic_info(@category, @question.answer_or_question)
+        redirect_to :action=>"index", :controller=>"playagain", :answer => @question.answer_or_question.to_s, :game => 'compguessing', :pic => @pic
       end
     end
 

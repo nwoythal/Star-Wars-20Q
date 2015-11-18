@@ -170,8 +170,13 @@ class Bus
     end
   end
 
-  # same with this method
-  def self.get_user_guess_info(category , node_number)
+  def self.get_pic_info(category,name)
+    case category
+      when "jedi"
+        return Jedi.jedi_pic_info(name)
+      else
+        return "empty"
+    end
 
   end
 
