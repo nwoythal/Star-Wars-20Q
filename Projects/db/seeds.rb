@@ -8,7 +8,9 @@ persons = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Jedi?', :n
            {:what_am_i => 'Redirect', :answer_or_question => 13, :node_number => 30},
            {:what_am_i => 'Question', :answer_or_question => 'Is it a Rebel?', :node_number => 31},
            {:what_am_i => 'Redirect', :answer_or_question => 10, :node_number => 62},
-            {:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 63}]
+           {:what_am_i => 'Question', :answer_or_question => 'Is it a Cyborg?', :node_number => 63},
+           {:what_am_i => 'Redirect', :answer_or_question => 8, :node_number => 126},
+            {:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 127}]
 
 places = [{:what_am_i => 'Question', :answer_or_question => 'Is it larger than a Moon?', :node_number => 1},
           {:what_am_i => 'Redirect', :answer_or_question => 17, :node_number => 2},
@@ -38,7 +40,38 @@ builts = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Weapon?', :
 
 animals = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
 
-cyborgs = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+cyborgs = [{:what_am_i => 'Question', :answer_or_question => 'Does their implant include an arm?', :node_number => 1},
+           {:what_am_i => 'Question', :answer_or_question => 'Is it a human?', :node_number => 2},
+           {:what_am_i => 'Question', :answer_or_question => 'Are they aligned with the Empire?', :node_number => 4},
+           {:what_am_i => 'Question', :answer_or_question => 'Did they fly a TIE Fighter?', :node_number => 8},
+           {:what_am_i => 'Answer', :answer_or_question => 'Qorl', :node_number => 16},
+           {:what_am_i => 'Answer', :answer_or_question => 'Grand Moff Trachta', :node_number => 17},
+           {:what_am_i => 'Question', :answer_or_question => 'Are they a Clone?', :node_number => 9},
+           {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Echo', :node_number => 18},
+           {:what_am_i => 'Answer', :answer_or_question => 'Jan Ors', :node_number => 19},
+           {:what_am_i => 'Question', :answer_or_question => 'Is it a bounty hunter?', :node_number => 5},
+           {:what_am_i => 'Question', :answer_or_question => 'Do they appear in the Clone Wars TV series?', :node_number => 10},
+           {:what_am_i => 'Answer', :answer_or_question => 'Sahan Alama', :node_number => 20},
+           {:what_am_i => 'Answer', :answer_or_question => 'Durge', :node_number => 21},
+           {:what_am_i => 'Question', :answer_or_question => 'Did he or she lose an arm to Luke Skywalker?', :node_number => 11},
+           {:what_am_i => 'Answer', :answer_or_question => 'Ponda Baba', :node_number => 22},
+           {:what_am_i => 'Answer', :answer_or_question => 'Nym', :node_number => 23},
+           {:what_am_i => 'Question', :answer_or_question => 'Is their augmentation an eye(s)?', :node_number => 3},
+           {:what_am_i => 'Question', :answer_or_question => 'Are they a solider?', :node_number => 6},
+           {:what_am_i => 'Question', :answer_or_question => 'Are they aligned with the Empire?', :node_number => 12},
+           {:what_am_i => 'Answer', :answer_or_question => 'Naman Fal', :node_number => 24},
+           {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Wolffe', :node_number => 25},
+           {:what_am_i => 'Question', :answer_or_question => 'Is he or she from the main Movies?', :node_number => 13},
+           {:what_am_i => 'Answer', :answer_or_question => 'Dengar', :node_number => 26},
+           {:what_am_i => 'Answer', :answer_or_question => 'Jool', :node_number => 27},
+           {:what_am_i => 'Question', :answer_or_question => 'Is it a human?', :node_number => 7},
+           {:what_am_i => 'Question', :answer_or_question => 'Is their implant a headband?', :node_number => 14},
+           {:what_am_i => 'Answer', :answer_or_question => 'Lanklyn', :node_number => 28},
+           {:what_am_i => 'Answer', :answer_or_question => 'Lobot', :node_number => 29},
+           {:what_am_i => 'Question', :answer_or_question => 'Is their implant superficial?', :node_number => 15},
+           {:what_am_i => 'Answer', :answer_or_question => 'Rianna Saren', :node_number => 30},
+           {:what_am_i => 'Answer', :answer_or_question => 'Cad Bane', :node_number => 31},
+          ]
 
 empires = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
 
