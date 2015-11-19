@@ -21,6 +21,7 @@ class Bus
   # all calls to the database must go through the bus
   #we will need to make this a dynamic call -Colton
   #for example
+
   def self.get_computer_guess_info(category , node_number)
     case category
       when "questions"
