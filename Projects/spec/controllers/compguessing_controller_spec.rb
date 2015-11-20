@@ -12,6 +12,7 @@ before :all do
     @question = Starthing.create({:id => 2, :what_am_i => 'Question', :answer_or_question => 'Are you a Male?', :node_number => 1})
     @answer1 = Starthing.create({:id => 3, :what_am_i => 'Answer', :answer_or_question => 'Obi Wan?', :node_number => 2})
     @answer2 = Starthing.create({:id => 4, :what_am_i => 'Answer', :answer_or_question => 'Ahsoka Tano', :node_number => 2})
+    @question2 = Starthing.create({:id => 5, :what_am_i => 'Question', :answer_or_question => 'Is it alive?', :node_number => 19})
    end
 
   describe 'index' do
@@ -30,11 +31,19 @@ before :all do
       get :index, {:category => "questions", :button_clicked => "no", :node_number => 1}, {:node_number => 1}
       expect(response).to redirect_to '/compguessing?category=questions&node_number=2'
     end
+    
+    it 'should select reset the node if over 17' do
+      get :index, {:category => "questions", :button_clicked => "no", :node_number => 19}, {:node_number => 19}
+      expect(response).to redirect_to '/compguessing?category=questions&node_number=1'
+    end
 
     it 'should select the index template' do
       get :index, {:node_number => 1, :category => "questions", :button_clicked => "yes"}
     end
-
+    #it 'should reset the node number to one if it is over 17' do
+    #  get :index, {:node_number => 19, :category => "questions", :button_clicked => "no"}
+    #  expect(response).to redirect_to '/compguessing?category=questions&node_number=1'
+    #end
     #
     # it 'should render the playagain page when node is an answer' do
     #   get :index, {:node_number => @question2.node_number}
