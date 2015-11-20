@@ -42,9 +42,9 @@
     <p style="text-align: center; color: red;">You have <%="#{@counter}"%> questions left.</p>    
       </center>
       <p>Enter your question below</p>
-      <%=form_tag :controller => '/userguessing', :method => :get, :action => 'index'%> 
+      <%=form_tag :controller => '/userguessing', :method => :get, :action => 'index'%>
       <div id=textField>
-        <%= text_field_tag :ask, params[:ask] ,:id => 'ask_field', :placeholder => 'Ask me a question!', size: '50'%>
+        <%= text_field_tag 'ask', @question=nil , :id => 'ask_field', :placeholder => 'Ask me a question!', size: '50'%>
       </div>
       <br>
       <br>

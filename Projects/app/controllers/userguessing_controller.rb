@@ -1,6 +1,7 @@
 class UserguessingController < ApplicationController
   def index
     # all calls to the database must go through the bus class
+    params[:ask]=@question
     if session[:usrguess_obj].nil?
       session[:usrguess_obj]=Bus.grab_object()
     end
