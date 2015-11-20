@@ -24,7 +24,7 @@ describe UserguessingController do
   end
 
   it 'should check if usrguess_obj is nil and if it is, pick a random value' do
-    get :index, { :usrguess_obj => nil }
+    get :index, { :usrguess_obj => 'nil' }
     expect(session[:usrguess_obj]).not_to eq(nil)
   end
 end
