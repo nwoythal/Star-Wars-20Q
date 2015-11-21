@@ -40,7 +40,7 @@ class Bus
           @question = Jedi.find_by_node_number(node_number)
           #what = question.what_am_i.to_s
         end
-      when "person"
+      when "starobject"
         if node_number == 1
           @question = Starthing.first
           #what = question.what_am_i.to_s
@@ -184,7 +184,7 @@ class Bus
   def self.get_category(node_number)
     case node_number
       when "1"
-        return "person"
+        return "starobject"
       when "2"
        return "place"
       when "3"
@@ -221,10 +221,10 @@ class Bus
   end 
   
   def self.grab_object()
-    category=get_category(rand(18).to_s).capitalize.constantize
+    category=get_category(rand(1..17).to_s).capitalize.constantize
     node_number=1
     while(category.find_by_node_number(node_number)[:what_am_i]!="Answer")
-      node_number=(node_number*2)+rand(2)
+      node_number=(node_number*2)+rand(0..1)
       if(category.find_by_node_number(node_number)[:what_am_i]=='Redirect')
         node_number+=1
       end

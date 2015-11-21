@@ -10,11 +10,11 @@ persons = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Jedi?', :n
            {:what_am_i => 'Redirect', :answer_or_question => 10, :node_number => 62},
            {:what_am_i => 'Question', :answer_or_question => 'Is it a Cyborg?', :node_number => 63},
            {:what_am_i => 'Redirect', :answer_or_question => 8, :node_number => 126},
-            {:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 127}]
+            {:what_am_i => 'Answer', :answer_or_question => 'person', :node_number => 127}]
 
 places = [{:what_am_i => 'Question', :answer_or_question => 'Is it larger than a Moon?', :node_number => 1},
           {:what_am_i => 'Redirect', :answer_or_question => 17, :node_number => 2},
-          {:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 3}]
+          {:what_am_i => 'Answer', :answer_or_question => 'place', :node_number => 3}]
 
 starobjects = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Weapon?', :node_number => 1},
            {:what_am_i => 'Redirect', :answer_or_question => 14, :node_number => 2},
@@ -22,23 +22,23 @@ starobjects = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Weapon
            {:what_am_i => 'Redirect', :answer_or_question => 8, :node_number => 6},
            {:what_am_i => 'Question', :answer_or_question => 'Is it an Machine?', :node_number => 7},
            {:what_am_i => 'Redirect', :answer_or_question => 16, :node_number => 14},
-           {:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 15}]
+           {:what_am_i => 'Answer', :answer_or_question => 'starobjects', :node_number => 15}]
 
 alives = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Person?', :node_number => 1},
           {:what_am_i => 'Redirect', :answer_or_question => 1, :node_number => 2},
           {:what_am_i => 'Question', :answer_or_question => 'Is it an Animal?', :node_number => 3},
           {:what_am_i => 'Redirect', :answer_or_question => 7, :node_number => 6},
-          {:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 7}]
+          {:what_am_i => 'Answer', :answer_or_question => 'alive', :node_number => 7}]
 
-sentients = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+sentients = [{:what_am_i => 'Answer', :answer_or_question => 'sentients', :node_number => 1}]
 
 builts = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Weapon?', :node_number => 1},
           {:what_am_i => 'Redirect', :answer_or_question => 14, :node_number => 2},
           {:what_am_i => 'Question', :answer_or_question => 'Is it an Cyborg?', :node_number => 3},
           {:what_am_i => 'Redirect', :answer_or_question => 8, :node_number => 6},
-          {:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 7}]
+          {:what_am_i => 'Answer', :answer_or_question => 'built', :node_number => 7}]
 
-animals = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+animals = [{:what_am_i => 'Answer', :answer_or_question => 'animals', :node_number => 1}]
 
 cyborgs = [{:what_am_i => 'Question', :answer_or_question => 'Does their implant include an arm?', :node_number => 1},
            {:what_am_i => 'Question', :answer_or_question => 'Is it a human?', :node_number => 2},
@@ -73,9 +73,9 @@ cyborgs = [{:what_am_i => 'Question', :answer_or_question => 'Does their implant
            {:what_am_i => 'Answer', :answer_or_question => 'Cad Bane', :node_number => 31},
           ]
 
-empires = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+empires = [{:what_am_i => 'Answer', :answer_or_question => 'empires', :node_number => 1}]
 
-rebels = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+rebels = [{:what_am_i => 'Answer', :answer_or_question => 'rebels', :node_number => 1}]
 
 universes = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Person?', :node_number => 1},
              {:what_am_i => 'Redirect', :answer_or_question => 1, :node_number => 2},
@@ -83,11 +83,11 @@ universes = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Person?'
              {:what_am_i => 'Redirect', :answer_or_question => 7, :node_number => 6},
              {:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 7}]
 
-siths = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+siths = [{:what_am_i => 'Answer', :answer_or_question => 'siths', :node_number => 1}]
 
-senators = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+senators = [{:what_am_i => 'Answer', :answer_or_question => 'senators', :node_number => 1}]
 
-weapons = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+weapons = [{:what_am_i => 'Answer', :answer_or_question => 'Weapons', :node_number => 1}]
 
 clones = [{:what_am_i => 'Question', :answer_or_question => 'Was this Clone a Commander in the Republic Army?', :node_number => 1},
           {:what_am_i => 'Question', :answer_or_question => 'Was this Clone the leader of the 212th Attack Battalion?', :node_number => 2},
@@ -232,7 +232,7 @@ machines = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Spacecraf
             {:what_am_i => 'Answer', :answer_or_question => 'V-Wing Airspeeder', :node_number => 231},
            ]
 
-moons = [{:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 1}]
+moons = [{:what_am_i => 'Answer', :answer_or_question => 'Moons', :node_number => 1}]
 
 jedis = [{:what_am_i => 'Question', :answer_or_question => 'Is this Jedi a Male?', :node_number => 1},
          {:what_am_i => 'Question', :answer_or_question => 'Did he fight in the Clone Wars?', :node_number => 2},
