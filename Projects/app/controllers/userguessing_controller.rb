@@ -5,6 +5,7 @@ class UserguessingController < ApplicationController
     if session[:usrguess_obj].nil?
       session[:usrguess_obj]=Bus.grab_object()
     end
+
     if session[:guesses_left].nil?
       @counter=session[:guesses_left]=20 #set counter
     elsif session[:guesses_left]>=1

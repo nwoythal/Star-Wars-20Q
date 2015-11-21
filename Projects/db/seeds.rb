@@ -16,7 +16,7 @@ places = [{:what_am_i => 'Question', :answer_or_question => 'Is it larger than a
           {:what_am_i => 'Redirect', :answer_or_question => 17, :node_number => 2},
           {:what_am_i => 'Answer', :answer_or_question => 'n/a', :node_number => 3}]
 
-objects = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Weapon?', :node_number => 1},
+starobjects = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Weapon?', :node_number => 1},
            {:what_am_i => 'Redirect', :answer_or_question => 14, :node_number => 2},
            {:what_am_i => 'Question', :answer_or_question => 'Is it an Cyborg?', :node_number => 3},
            {:what_am_i => 'Redirect', :answer_or_question => 8, :node_number => 6},
