@@ -188,7 +188,7 @@ class Bus
       when "2"
        return "place"
       when "3"
-       return  "object"
+       return  "starobject"
       when "4"
         return "alive"
       when "5"
@@ -221,6 +221,32 @@ class Bus
   end 
   
   def self.grab_object()
-    return get_category(rand(19).to_s)
+    category=get_category(rand(18).to_s).capitalize.constantize
+    node_number=1
+    while(category.find_by_node_number(node_number)[:what_am_i]!="Answer")
+      node_number=(node_number*2)+rand(2)
+      if(category.find_by_node_number(node_number)[:what_am_i]=='Redirect')
+        node_number+=1
+      end
+    end
+    return category.find_by_node_number(node_number)[:answer_or_question]
   end
+
+
+=begin
+
+  def self.search_for_question(current_node, question)
+    parent_node=(current_node/2.0).floor #2.0, just in case of truncation error
+    question=question.downcase.gsub(/[^0-9a-z\?]/i,' ') #remove punctuation
+    while(find_by_node_number(parent_node)[:question_or_answer].downcase!=question&&parent_node>=1) #ends at 1 for now
+      current_node=parent_node
+      parent_node=(parent_node/2.0).floor
+    end
+    if(find_by_node_number(parent_node)[:question_or_answer].downcase==question)
+      return parent_node*2==current_node
+    end
+    return false
+  end
+=end
+
 end
