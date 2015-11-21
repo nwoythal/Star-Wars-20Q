@@ -322,7 +322,7 @@ places.each do |task|
   Place.create!(task)
 end
 
-objects.each do |task|
+starobjects.each do |task|
   Starobject.create!(task)
 end
 
