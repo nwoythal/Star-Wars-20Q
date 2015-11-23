@@ -9,44 +9,45 @@
       <li><a href="/welcome">Home</a></li>
       <li>
         <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Rules</a>
-        <div id="light" class="white_content">Game rules
+        <div id="light" class="white_content">Game Rules:
 <br>
-<br>When you get onto the home page, you have two game style choices to pick from to play. 
+<br>There are two game styles to choose from.
 <br>
-<br>When the Computer Guesses 
+<br>1. Guess yours
 <br>
-<br>Once you select this mode, the computer will begin to ask you a series of close-ended (yes/no) questions. The computer will ask 
-<br>you up to 20 questions to try to figure out the what the player has chosen. Once it gets to the twentieth question, or what it thinks is
-<br>the answer,  the computer will guess what your answer is. If the player indicates that the computer has guessed correctly  a “Win" will
-<br>be displayed on the screen. If it loses, there will be a “Lose” on the screen. 
+<br>  Once you select this mode, the computer will begin to ask you a series of close-ended (yes/no) questions. The computer will ask
+<br>  you up to 20 questions to try to figure out the what the player has chosen. Once it gets to the twentieth question, or what it thinks is
+<br>  the answer,  the computer will guess what your answer is. If the player indicates that the computer has guessed correctly  a “Win" will
+<br>  be displayed on the screen. If it loses, there will be a “Lose” on the screen.
 <br>
 <br> 
-<br>When you Guess 
+<br>2. Guess mine
 <br>
-<br>Once you select this mode, you will be prompted to ask the computer a yes/no question of your have choice. You can ask up 
-<br>to 20 close-ended (yes/no) questions, so when you have asked the 20th question and have not yet answered, you will have to guess. 
-<br>Although you will be able to guess at any point throughout the game, via the guess button in the corner. Users may guess only one 
-<br>time. If you guess correctly, the word “Win” will be displayed on the screen. If you guess incorrectly, you will receive a “Lose.”
+<br>  Once you select this mode, you will be prompted to ask the computer a yes/no question of your have choice. You can ask up
+<br>  to 20 close-ended (yes/no) questions, so when you have asked the 20th question and have not yet answered, you will have to guess.
+<br>  Although you will be able to guess at any point throughout the game, via the guess button in the corner. Users may guess only one
+<br>  time. If you guess correctly, the word “Win” will be displayed on the screen. If you guess incorrectly, you will receive a “Lose.”
           <br> <br> <a href = "javascript:void(0)" style="color: red" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Click Here To Go Back</a></div>
         <div id="fade" class="black_overlay"></div>
       </li>
     </ul> 
   </div>
-  <h2>Would you like to pick an object, or guess mine?</h2>
+  <h2>Would you like to pick an object for me to guess, <br> or would you like to guess mine?</h2>
 <div id=button_holder> 
-    <%=link_to "Pick an object",{:action=>"index", :controller=>"compguessing", :category=>"questions", :node_number => 0},:class => 'button'%>
-    <%=link_to "Guess your object",{:action=>"index", :controller=>"userguessing", :category=>"questions", :node_number => 0},:class => 'button'%>
+    <%=link_to "Guess Yours",{:action=>"index", :controller=>"compguessing", :category=>"questions", :node_number => 0},:class => 'button'%>
+    <%=link_to "Guess Mine",{:action=>"index", :controller=>"userguessing", :category=>"questions", :node_number => 0},:class => 'button'%>
 </div>
 
+
 </body>
+<div id="wrapper">
+<div id="left_holder">
+<%= image_tag("#{@pic_one}", :alt => "rss feed") %>
+</div>
 
-
-<head>
-  <title>LIGHTBOX EXAMPLE</title>
-  <style>
-
-  </style>
-</head>
-
+<div id="right_holder">
+  <%= image_tag("#{@pic_two}", :alt => "rss feed") %>
+</div>
+</div>
 
 </html>
