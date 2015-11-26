@@ -10,7 +10,7 @@ class CompguessingController < ApplicationController
       @category = params[:category]
       @node_number = session[:node_number]
       @node_number = @node_number = 1 + Integer(@node_number)
-      if @node_number > 17
+      if @node_number > 15
         @node_number = 1
       end
       redirect_to :action=>"index", :controller=> "compguessing",  :category=>"#{@category}", :node_number => @node_number

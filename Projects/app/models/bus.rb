@@ -64,22 +64,6 @@ class Bus
           @question = Starthing.find_by_node_number(node_number)
           #what = question.what_am_i.to_s
         end
-      when "alive"
-        if node_number == 1
-          @question = Alive.first
-          #what = question.what_am_i.to_s
-        else
-          @question = Alive.find_by_node_number(node_number)
-          #what = question.what_am_i.to_s
-        end
-      when "sentient"
-        if node_number == 1
-          @question = Sentient.first
-          #what = question.what_am_i.to_s
-        else
-          @question = Sentient.find_by_node_number(node_number)
-          #what = question.what_am_i.to_s
-        end
       when "built"
         if node_number == 1
           @question = Built.first
@@ -186,42 +170,38 @@ class Bus
       when "1"
         return "starthing"
       when "2"
-       return "place"
+        return "place"
       when "3"
-       return  "starobject"
+        return "starobject"
       when "4"
-        return "alive"
-      when "5"
-        return "sentient"
-      when "6"
         return "built"
-      when "7"
+      when "5"
         return "animal"
-      when "8"
+      when "6"
         return "cyborg"
-      when "9"
+      when "7"
         return "empire"
-      when "10"
+      when "8"
         return "rebel"
-      when "11"
+      when "9"
         return "jedi"
-      when "12"
+      when "10"
         return "sith"
-      when "13"
+      when "11"
         return "senator"
-      when "14"
+      when "12"
         return "weapon"
-      when "15"
+      when "13"
         return "clone"
-      when "16"
+      when "14"
         return "machine"
-      when "17"
+      when "15"
         return "moon"
     end
   end 
   
   def self.grab_object()
-    category=get_category(rand(1..17).to_s).capitalize.constantize
+    category=get_category(rand(1..15).to_s).capitalize.constantize
     node_number=1
     while(category.find_by_node_number(node_number)[:what_am_i]!="Answer")
       node_number=(node_number*2)+rand(0..1)
