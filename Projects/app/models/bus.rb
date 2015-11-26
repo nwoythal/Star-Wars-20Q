@@ -42,10 +42,10 @@ class Bus
         end
       when "starobject"
         if node_number == 1
-          @question = Starthing.first
+          @question = Starobject.first
           #what = question.what_am_i.to_s
         else
-          @question = Starthing.find_by_node_number(node_number)
+          @question = Starobject.find_by_node_number(node_number)
           #what = question.what_am_i.to_s
         end
       when "place"
@@ -56,12 +56,12 @@ class Bus
           @question = Place.find_by_node_number(node_number)
           #what = question.what_am_i.to_s
         end
-      when "object"
+      when "starthing"
         if node_number == 1
-          @question = Starobject.first
+          @question = Starthing.first
           #what = question.what_am_i.to_s
         else
-          @question = Starobject.find_by_node_number(node_number)
+          @question = Starthing.find_by_node_number(node_number)
           #what = question.what_am_i.to_s
         end
       when "alive"
@@ -184,7 +184,7 @@ class Bus
   def self.get_category(node_number)
     case node_number
       when "1"
-        return "starobject"
+        return "starthing"
       when "2"
        return "place"
       when "3"
