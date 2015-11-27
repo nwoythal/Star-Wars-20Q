@@ -159,6 +159,8 @@ class Bus
     case category
       when "jedi"
         return Jedi.jedi_pic_info(name)
+      when "clone"
+        return Clone.clone_pic_info(name)
       else
         return "empty"
     end

@@ -236,7 +236,9 @@ clones = [{:what_am_i => 'Question', :answer_or_question => 'Was this Clone a Co
           {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Jesse', :node_number => 503},
           {:what_am_i => 'Question', :answer_or_question => 'Was this Clone known for his Mustache?', :node_number => 63},
           {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Boil', :node_number => 126},
-          {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Waxer', :node_number => 127}
+          {:what_am_i => 'Question', :answer_or_question => 'Did this Clone have a robotic eye?', :node_number => 127},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Wolffe', :node_number => 254},
+          {:what_am_i => 'Answer', :answer_or_question => 'Clone Trooper Waxer', :node_number => 255}
          ]
 
 machines = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Spacecraft?', :node_number => 1},
