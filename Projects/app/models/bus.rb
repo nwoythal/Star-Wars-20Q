@@ -152,6 +152,14 @@ class Bus
           @question = Moon.find_by_node_number(node_number)
           #what = question.what_am_i.to_s
         end
+      when "sentient"
+        if node_number == 1
+          @question = Sentient.first
+          #what = question.what_am_i.to_s
+        else
+          @question = Sentient.find_by_node_number(node_number)
+          #what = question.what_am_i.to_s
+        end
     end
   end
 
@@ -199,6 +207,8 @@ class Bus
         return "machine"
       when "15"
         return "moon"
+      when "16"
+        return "sentient"
     end
   end 
   

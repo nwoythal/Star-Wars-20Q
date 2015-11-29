@@ -10,7 +10,7 @@ persons = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Jedi?', :n
            {:what_am_i => 'Redirect', :answer_or_question => 8, :node_number => 62},
            {:what_am_i => 'Question', :answer_or_question => 'Is it a Cyborg?', :node_number => 63},
            {:what_am_i => 'Redirect', :answer_or_question => 6, :node_number => 126},
-            {:what_am_i => 'Answer', :answer_or_question => 'person', :node_number => 127}]
+            {:what_am_i => 'Redirect', :answer_or_question => 16, :node_number => 127}]
 
 places = [{:what_am_i => 'Question', :answer_or_question => 'Is it larger than a Moon?', :node_number => 1},
           {:what_am_i => 'Redirect', :answer_or_question => 15, :node_number => 2},
