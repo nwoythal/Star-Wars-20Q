@@ -144,7 +144,7 @@ describe Bus do
     it 'should return a random number' do
       #Force seed to test result
       srand(50)
-      expect(Bus.grab_object).to eq('Obi Wan?')
+      expect(Bus.grab_object).to eq(["Obi Wan?", "Starthing", 2])
     end
   end
 end
