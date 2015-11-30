@@ -1,4 +1,4 @@
-persons = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Jedi?', :node_number => 1},
+sentients = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Jedi?', :node_number => 1},
            {:what_am_i => 'Redirect', :answer_or_question => 9, :node_number => 2},
            {:what_am_i => 'Question', :answer_or_question => 'Is it a Sith?', :node_number => 3},
            {:what_am_i => 'Redirect', :answer_or_question => 10, :node_number => 6},
@@ -103,13 +103,13 @@ alives = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Person?', :
           {:what_am_i => 'Redirect', :answer_or_question => 7, :node_number => 6},
           {:what_am_i => 'Answer', :answer_or_question => 'alive', :node_number => 7}]
 
-sentients = [ {:what_am_i => 'Question', :answer_or_question => 'Is it part of the principal cast?', :node_number => 1},
+persons = [ {:what_am_i => 'Question', :answer_or_question => 'Is it part of the principal cast?', :node_number => 1},
         {:what_am_i => 'Question', :answer_or_question => "Is its\' adult version played by the same actor every time?", :node_number => 2},
         {:what_am_i => 'Question', :answer_or_question => 'Is it a Jedi Knight?', :node_number => 3},
         {:what_am_i => 'Question', :answer_or_question => 'Is it a droid/robot?', :node_number => 4},
         {:what_am_i => 'Question', :answer_or_question => 'Is it part of the Dark Side?', :node_number => 5},
         {:what_am_i => 'Question', :answer_or_question => "Is its' lightsaber purple?", :node_number => 6},
-        {:what_am_i => 'Question', :answer_or_question => 'Was it built to help around a home?', :node_number => 8},
+        {:what_am_i => 'Question', :answer_or_question => 'Is it a astromech droid?', :node_number => 8},
         {:what_am_i => 'Question', :answer_or_question => 'Is it human?', :node_number => 9},
         {:what_am_i => 'Question', :answer_or_question => 'Is it old and wrinkled?', :node_number => 10},
         {:what_am_i => 'Answer', :answer_or_question => 'Obi-Wan Kenobi', :node_number => 11},
@@ -134,7 +134,7 @@ sentients = [ {:what_am_i => 'Question', :answer_or_question => 'Is it part of t
         {:what_am_i => 'Question', :answer_or_question => 'Is it played by the same actor each time?', :node_number => 14},
         {:what_am_i => 'Question', :answer_or_question => 'Is it male?', :node_number => 28},
         {:what_am_i => 'Answer', :answer_or_question => 'Mas Amedda', :node_number => 29},
-        {:what_am_i => 'Question', :answer_or_question => 'Does it have a military rank?', :node_number => 56},
+        {:what_am_i => 'Question', :answer_or_question => 'Does their name consist of a military title?', :node_number => 56},
         {:what_am_i => 'Question', :answer_or_question => 'Is it a queen?', :node_number => 57},
         {:what_am_i => 'Question', :answer_or_question => 'Is it a commander?', :node_number => 112},
         {:what_am_i => 'Question', :answer_or_question => 'Can it survive underwater?', :node_number => 113},
@@ -1865,7 +1865,7 @@ jedis = [{:what_am_i => 'Question', :answer_or_question => 'Is this Jedi a Male?
          {:what_am_i => 'Answer', :answer_or_question => 'Bultar Swan', :node_number => 255},
          {:what_am_i => 'Question', :answer_or_question => 'Was she trained by Anakin Skywalker?', :node_number => 6}]
 
-questions = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Person?', :node_number => 1},
+questions = [{:what_am_i => 'Question', :answer_or_question => 'Is it a charater from the Movies?', :node_number => 1},
              {:what_am_i => 'Question', :answer_or_question => 'Is it a Place?', :node_number => 2},
              {:what_am_i => 'Question', :answer_or_question => 'Is it an Object?', :node_number => 3},
              {:what_am_i => 'Question', :answer_or_question => 'Is it a Building?', :node_number => 4},

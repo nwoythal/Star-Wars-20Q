@@ -169,6 +169,8 @@ class Bus
         return Jedi.jedi_pic_info(name)
       when "clone"
         return Clone.clone_pic_info(name)
+      when "sith"
+        return Sith.sith_pic_info(name)
       else
         return "empty"
     end
