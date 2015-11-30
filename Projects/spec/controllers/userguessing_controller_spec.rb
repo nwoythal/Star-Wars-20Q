@@ -2,6 +2,7 @@ require 'rails_helper'
 require 'spec_helper'
 
 describe UserguessingController do
+  load "#{Rails.root}/db/seeds.rb"  
   it 'starts a new game' do
     get :create
     expect(response).to redirect_to('/userguessing')
