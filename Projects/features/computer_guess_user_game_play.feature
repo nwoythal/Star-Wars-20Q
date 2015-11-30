@@ -9,8 +9,9 @@ Feature: As a User I want the computer to guess what I am thinking.
     Given the database is set up:
       | what_am_i | answer_or_question | node_number |
       | Question  | Are you a Person?  | 1           |
+      | Question  | Are you a Person?  | 2           |
 
-    Given the following tasks exist:
+    Given the following tasks are set up for user guess game:
       | what_am_i | answer_or_question | node_number |
       | Question  | Are you a Male?    | 1           |
       | Answer    | Obi Wan            | 2           |
@@ -20,9 +21,26 @@ Feature: As a User I want the computer to guess what I am thinking.
 
   Scenario: The user plays a simple game
     Then I should see "Welcome to Twenty Questions!"
-    And I should see "Would you like to pick an object, or guess mine?"
-    And I follow "Pick an object"
+    And I should see "Would you like to pick an object for me to guess,"
+    And I should see " or would you like to guess mine?"
+    And I follow "Guess Yours"
     Then I should be on the ComputersQuestion page
+    And I should see "Are you a Person?"
+    And I follow "Yes"
+    And I should see "Are you a Male?"
+    And I follow "Yes"
+    Then I should be on the PlayAgain page
+    And I should see "Computer Guesses: Obi Wan"
+    And I should see "Would you like to play again?"
+
+  Scenario: The user plays simple game
+    Then I should see "Welcome to Twenty Questions!"
+    And I should see "Would you like to pick an object for me to guess,"
+    And I should see " or would you like to guess mine?"
+    And I follow "Guess Yours"
+    Then I should be on the ComputersQuestion page
+    And I should see "Are you a Person?"
+    And I follow "No"
     And I should see "Are you a Person?"
     And I follow "Yes"
     And I should see "Are you a Male?"

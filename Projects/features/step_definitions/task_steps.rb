@@ -12,9 +12,34 @@ Given /the following tasks exist/ do |task_table|
   end
 end
 
+Given /the following tasks are set up for user guess game/ do |task_table|
+  task_table.hashes.each do |task|
+    Jedi.create!(task)
+    Starthing.create!(task)
+    Place.create!(task)
+    Starobject.create!(task)
+    Alive.create!(task)
+    Sentient.create!(task)
+    Built.create!(task)
+    Animal.create!(task)
+    Cyborg.create!(task)
+    Empire.create!(task)
+    Rebel.create!(task)
+    Universe.create!(task)
+    Sith.create!(task)
+    Senator.create!(task)
+    Weapon.create!(task)
+    Clone.create!(task)
+    Machine.create!(task)
+    Moon.create!(task)
+    Question.create!(task)
+  end
+end
+
+
 Given /I have already started playing a game/ do
   steps %Q{
-      And I follow "Pick an object"
+      And I follow "Guess Yours"
       Then I should be on the ComputersQuestion page
       And I should see "Are you a Person?"
       And I follow "Yes"
@@ -46,7 +71,7 @@ end
 
 Given /I have already played a game/ do
   steps %Q{
-        And I follow "Pick an object"
+        And I follow "Guess Yours"
         Then I should be on the ComputersQuestion page
         And I should see "Are you a Person?"
         And I follow "Yes"

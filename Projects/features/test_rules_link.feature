@@ -21,17 +21,17 @@ Background: tasks have been added to database
 Scenario: I would like to check the rules on the Welcome Page
   And I should see "Rules"
   Then I follow "Rules"
-  And I should see "Game rules"
+  And I should see "Game Rules:"
   And I should see "Click Here To Go Back"
   Then I follow "Click Here To Go Back"
   Then I should be on the Welcome page
 
 Scenario: I would like to check the rules on the ComputersQuestion page
-  And I follow "Pick an object"
+  And I follow "Guess Yours"
   And I should be on the ComputersQuestion page
   And I should see "Rules"
   Then I follow "Rules"
-  And I should see "Game rules"
+  And I should see "Game Rules:"
   And I should see "Click Here To Go Back"
   Then I follow "Click Here To Go Back"
   Then I should be on the ComputersQuestion page
@@ -41,7 +41,7 @@ Scenario: I would like to check the rules on the Play Again page
   And I should be on the PlayAgain page
   And I should see "Rules"
   Then I follow "Rules"
-  And I should see "Game rules"
+  And I should see "Game Rules:"
   And I should see "Click Here To Go Back"
   Then I follow "Click Here To Go Back"
   Then I should be on the PlayAgain page
