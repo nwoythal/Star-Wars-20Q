@@ -86,60 +86,57 @@ describe Bus do
   end
   describe 'get_pic_info' do
     it 'should remove spaces in names and make lowercase' do
-      expect(Bus.get_pic_info("jedi",'Obi Wan')).to eq('obiwan')
+      expect(Bus.get_pic_info("jedi",'Obi Wan')).to eq('jedi/obiwan')
     end
   end
   describe 'get_category' do
     it 'should check person' do
-      expect(Bus.get_category('1')).to eq('person')
+      expect(Bus.get_category('1')).to eq('starthing')
     end
     it 'should check place' do
       expect(Bus.get_category('2')).to eq('place')
     end
     it 'should check object' do
-      expect(Bus.get_category('3')).to eq('object')
+      expect(Bus.get_category('3')).to eq('starobject')
     end
     it 'should check alive' do
-      expect(Bus.get_category('4')).to eq('alive')
+      expect(Bus.get_category('4')).to eq('built')
     end
     it 'should check sentient' do
-      expect(Bus.get_category('5')).to eq('sentient')
+      expect(Bus.get_category('5')).to eq('animal')
     end
     it 'should check built' do
-      expect(Bus.get_category('6')).to eq('built')
+      expect(Bus.get_category('6')).to eq('cyborg')
     end
     it 'should check animal' do
-       expect(Bus.get_category('7')).to eq('animal')
+       expect(Bus.get_category('7')).to eq('empire')
     end
     it 'should check cyborg' do
-      expect(Bus.get_category('8')).to eq('cyborg')
+      expect(Bus.get_category('8')).to eq('rebel')
     end
     it 'should check empire' do
-      expect(Bus.get_category('9')).to eq('empire')
+      expect(Bus.get_category('9')).to eq('jedi')
     end
     it 'should check rebel' do
-      expect(Bus.get_category('10')).to eq('rebel')
+      expect(Bus.get_category('10')).to eq('sith')
     end
     it 'should check jedi' do
-      expect(Bus.get_category('11')).to eq('jedi')
+      expect(Bus.get_category('11')).to eq('senator')
     end
     it 'should check sith' do
-      expect(Bus.get_category('12')).to eq('sith')
+      expect(Bus.get_category('12')).to eq('weapon')
     end
     it 'should check senator' do
-      expect(Bus.get_category('13')).to eq('senator')
+      expect(Bus.get_category('13')).to eq('clone')
     end
     it 'should check weapon' do
-      expect(Bus.get_category('14')).to eq('weapon')
+      expect(Bus.get_category('14')).to eq('machine')
     end
     it 'should check clone' do
-      expect(Bus.get_category('15')).to eq('clone')
+      expect(Bus.get_category('15')).to eq('moon')
     end
     it 'should check machine' do
-      expect(Bus.get_category('16')).to eq('machine')
-    end
-    it 'should check moon' do
-      expect(Bus.get_category('17')).to eq('moon')
+      expect(Bus.get_category('16')).to eq('sentient')
     end
   end
   
