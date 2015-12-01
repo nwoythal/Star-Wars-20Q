@@ -239,19 +239,19 @@ class Bus
     #also need root question
     case category.downcase
       when "starthing"
-        list_of_questions.push("Is it a person?")
+        list_of_questions.push("Is it a charater from the Movies?")
       when "place"
-        list_of_questions.push("Is it a place?")
+        list_of_questions.push("Is it a Place?")
       when "starobject"
-        list_of_questions.push("Is it an object?")
+        list_of_questions.push("Is it an Object?")
       when "built"
-        list_of_questions.push("Can it be built?")
+        list_of_questions.push("Is it a Building?")
       when "animal"
-        list_of_questions.push("Is it an animal?")
+        list_of_questions.push("Is it an Animal?")
       when "cyborg"
-        list_of_questions.push("Is it a cyborg?")
+        list_of_questions.push("Is it a Cyborg?")
       when "empire"
-        list_of_questions.push("Is it part of the Empire?")
+        list_of_questions.push("Is it part of the Galactic Empire?")
       when "rebel"
         list_of_questions.push("Is it a Rebel")
       when "jedi"
@@ -259,15 +259,15 @@ class Bus
       when "sith"
         list_of_questions.push("Is it a Sith?")
       when "senator"
-        list_of_questions.push("Is it a senator?")
+        list_of_questions.push("Is it a Senator?")
       when "weapon"
-        list_of_questions.push("Is it a weapon?")
+        list_of_questions.push("Is it a Weapon?")
       when "clone"
-        list_of_questions.push("Is it a clone?")
+        list_of_questions.push("Is it a Clone?")
       when "machine"
-        list_of_questions.push("Is it a machine?")
+        list_of_questions.push("Is it a Machine?")
       when "moon"
-        list_of_questions.push("Is it larger than a moon?")
+        list_of_questions.push("Is it larger than a Moon?")
     end
     return list_of_questions;
   end

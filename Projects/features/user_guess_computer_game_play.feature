@@ -38,7 +38,7 @@ Feature: Allow user to ask a questions so they can guess the computers person, p
     And I follow "Guess Mine"
     Then I should be on the UserQuestion page
     And I should see "Enter your question"
-    And I fill in "ask" with "Are you a Jedi?"
+    And I fill in "input" with "Are you a Jedi?"
     And I press "Ask question"
     And I should see "You have 19 questions left."
 

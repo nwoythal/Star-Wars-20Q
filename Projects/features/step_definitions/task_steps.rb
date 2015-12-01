@@ -65,7 +65,7 @@ And /I have already asked (.*) questions/ do |number|
   i = 1
   while (i <= number.to_i - 1) do
     steps %Q{
-            And I fill in "ask" with "Are you Luke Skywalker?"
+            And I fill in "input" with "Are you Luke Skywalker?"
             And I press "Ask question"
          }
     i += 1

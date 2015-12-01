@@ -1,6 +1,7 @@
 class UserguessingController < ApplicationController
   def index
     # all calls to the database must go through the bus class
+    @answer = "Incorrect!"
     @input = params[:input]
     if session[:usrguess_obj].nil? && session[:yes_questions].nil?
       session[:usrguess_obj]=Bus.grab_object()
@@ -13,6 +14,17 @@ class UserguessingController < ApplicationController
       @counter=session[:guesses_left]-=1
     elsif session[:guesses_left]<1
       redirect_to show_path()
+    end
+    if !@input.nil?
+      session[:yes_questions].each do |question|
+        if @input.delete(' ').downcase == question.delete(' ').downcase
+          @answer = "Correct!"
+
+        end
+
+      end
+    else
+      @answer = ""
     end
 
   end
