@@ -21,6 +21,7 @@ describe UserguessingController do
   end
 
   it 'Should check re-route if guesses_left is equal to zero' do
+    expect(Bus).to receive(:grab_object).and_return(["Obi Wan?", "Starthing", 2])
     get :index, {} ,{:guesses_left => 0}
     expect(response).to redirect_to '/userguessing/show'
   end
