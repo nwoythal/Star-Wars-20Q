@@ -7,7 +7,6 @@ class UserguessingController < ApplicationController
       session[:yes_questions]=Bus.find_yes_questions(session[:usrguess_obj][1], session[:usrguess_obj][2])
       session[:usrguess_obj]=session[:usrguess_obj][0] #set to answer
     end
-    debugger
     if session[:guesses_left].nil?
       @counter=session[:guesses_left]=20 #set counter
     elsif session[:guesses_left]>=1
