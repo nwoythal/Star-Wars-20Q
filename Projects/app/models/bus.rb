@@ -213,7 +213,7 @@ class Bus
         return "sentient"
     end
   end 
-  
+
   def self.grab_object()
     category=get_category(rand(1..15).to_s).capitalize.constantize
     node_number=1
@@ -223,24 +223,54 @@ class Bus
         node_number+=1
       end
     end
-    return category.find_by_node_number(node_number)[:answer_or_question]
+    return [category.find_by_node_number(node_number)[:answer_or_question], category.to_s, node_number] #return array
   end
-
-
-=begin
-
-  def self.search_for_question(current_node, question)
+  
+  def self.find_yes_questions(category, current_node)
+    list_of_questions=[]
     parent_node=(current_node/2.0).floor #2.0, just in case of truncation error
-    question=question.downcase.gsub(/[^0-9a-z\?]/i,' ') #remove punctuation
-    while(find_by_node_number(parent_node)[:question_or_answer].downcase!=question&&parent_node>=1) #ends at 1 for now
+    while(parent_node>=1) #ends at 1 for now
+      if (parent_node*2)==current_node #we know the answer is yes
+        list_of_questions.push(category.constantize.find_by_node_number(parent_node)[:answer_or_question]) #store question in array
+      end
       current_node=parent_node
       parent_node=(parent_node/2.0).floor
     end
-    if(find_by_node_number(parent_node)[:question_or_answer].downcase==question)
-      return parent_node*2==current_node
+    #also need root question
+    case category.downcase
+      when "starthing"
+        list_of_questions.push("Is it a person?")
+      when "place"
+        list_of_questions.push("Is it a place?")
+      when "starobject"
+        list_of_questions.push("Is it an object?")
+      when "built"
+        list_of_questions.push("Can it be built?")
+      when "animal"
+        list_of_questions.push("Is it an animal?")
+      when "cyborg"
+        list_of_questions.push("Is it a cyborg?")
+      when "empire"
+        list_of_questions.push("Is it part of the Empire?")
+      when "rebel"
+        list_of_questions.push("Is it a Rebel")
+      when "jedi"
+        list_of_questions.push("Is it a Jedi?")
+      when "sith"
+        list_of_questions.push("Is it a Sith?")
+      when "senator"
+        list_of_questions.push("Is it a senator?")
+      when "weapon"
+        list_of_questions.push("Is it a weapon?")
+      when "clone"
+        list_of_questions.push("Is it a clone?")
+      when "machine"
+        list_of_questions.push("Is it a machine?")
+      when "moon"
+        list_of_questions.push("Is it larger than a moon?")
     end
-    return false
+    return list_of_questions;
   end
-=end
+
 
 end

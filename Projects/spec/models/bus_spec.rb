@@ -19,25 +19,17 @@ describe Bus do
       expect(Bus.get_computer_guess_info('jedi', '1')).to eq(Jedi.first)
       expect(Bus.get_computer_guess_info('jedi', 1)).to eq(Jedi.first)
     end
-    it 'Should check person' do
-      expect(Bus.get_computer_guess_info('person', '1')).to eq(Starthing.first)
-      expect(Bus.get_computer_guess_info('person', 1)).to eq(Starthing.first)
-    end
+    it 'Should check object' do
+      expect(Bus.get_computer_guess_info('starobject', '1')).to eq(Starobject.first)
+      expect(Bus.get_computer_guess_info('starobject', 1)).to eq(Starobject.first)
+    end 
     it 'Should check place' do
       expect(Bus.get_computer_guess_info('place', '1')).to eq(Place.first)
       expect(Bus.get_computer_guess_info('place', 1)).to eq(Place.first)
-    end  
-    it 'Should check object' do
-      expect(Bus.get_computer_guess_info('object', '1')).to eq(Starobject.first)
-      expect(Bus.get_computer_guess_info('object', 1)).to eq(Starobject.first)
     end 
-    it 'Should check alive' do
-      expect(Bus.get_computer_guess_info('alive', '1')).to eq(Alive.first)
-      expect(Bus.get_computer_guess_info('alive', 1)).to eq(Alive.first)
-    end 
-    it 'Should check sentient' do
-      expect(Bus.get_computer_guess_info('sentient', '1')).to eq(Sentient.first)
-      expect(Bus.get_computer_guess_info('sentient', 1)).to eq(Sentient.first)
+    it 'Should check starthing' do
+      expect(Bus.get_computer_guess_info('starthing', '1')).to eq(Starthing.first)
+      expect(Bus.get_computer_guess_info('starthing', 1)).to eq(Starthing.first)
     end 
     it 'Should check built' do
       expect(Bus.get_computer_guess_info('built', '1')).to eq(Built.first)
@@ -83,14 +75,22 @@ describe Bus do
       expect(Bus.get_computer_guess_info('moon', '1')).to eq(Moon.first)
       expect(Bus.get_computer_guess_info('moon', 1)).to eq(Moon.first)
     end 
+    it 'Should check sentient' do
+      expect(Bus.get_computer_guess_info('sentient', '1')).to eq(Sentient.first)
+      expect(Bus.get_computer_guess_info('sentient', 1)).to eq(Sentient.first)
+    end     
   end
+
+
   describe 'get_pic_info' do
     it 'should remove spaces in names and make lowercase' do
       expect(Bus.get_pic_info("jedi",'Obi Wan')).to eq('jedi/obiwan')
     end
   end
+
+
   describe 'get_category' do
-    it 'should check person' do
+    it 'should check starthing' do
       expect(Bus.get_category('1')).to eq('starthing')
     end
     it 'should check place' do
@@ -99,43 +99,43 @@ describe Bus do
     it 'should check object' do
       expect(Bus.get_category('3')).to eq('starobject')
     end
-    it 'should check alive' do
+    it 'should check built' do
       expect(Bus.get_category('4')).to eq('built')
     end
-    it 'should check sentient' do
+    it 'should check animal' do
       expect(Bus.get_category('5')).to eq('animal')
     end
-    it 'should check built' do
+    it 'should check cyborg' do
       expect(Bus.get_category('6')).to eq('cyborg')
     end
-    it 'should check animal' do
+    it 'should check empire' do
        expect(Bus.get_category('7')).to eq('empire')
     end
-    it 'should check cyborg' do
+    it 'should check rebel' do
       expect(Bus.get_category('8')).to eq('rebel')
     end
-    it 'should check empire' do
+    it 'should check jedi' do
       expect(Bus.get_category('9')).to eq('jedi')
     end
-    it 'should check rebel' do
+    it 'should check sith' do
       expect(Bus.get_category('10')).to eq('sith')
     end
-    it 'should check jedi' do
+    it 'should check senator' do
       expect(Bus.get_category('11')).to eq('senator')
     end
-    it 'should check sith' do
+    it 'should check weapon' do
       expect(Bus.get_category('12')).to eq('weapon')
     end
-    it 'should check senator' do
+    it 'should check clone' do
       expect(Bus.get_category('13')).to eq('clone')
     end
-    it 'should check weapon' do
+    it 'should check machine' do
       expect(Bus.get_category('14')).to eq('machine')
     end
-    it 'should check clone' do
+    it 'should check moon' do
       expect(Bus.get_category('15')).to eq('moon')
     end
-    it 'should check machine' do
+    it 'should check sentient' do
       expect(Bus.get_category('16')).to eq('sentient')
     end
   end
@@ -143,8 +143,8 @@ describe Bus do
   describe 'grab_object' do
     it 'should return a random number' do
       #Force seed to test result
-      srand(100)
-      expect(Bus.grab_object).to eq('cyborg')
+      srand(50)
+      expect(Bus.grab_object).to eq(["Obi Wan?", "Starthing", 2])
     end
   end
 end
