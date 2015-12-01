@@ -231,7 +231,7 @@ class Bus
     parent_node=(current_node/2.0).floor #2.0, just in case of truncation error
     while(parent_node>=1) #ends at 1 for now
       if (parent_node*2)==current_node #we know the answer is yes
-        list_of_questions.push(category.constantize.find_by_node_number(parent_node)[:answer_or_question]) #store question in array
+        list_of_questions.push(category.constantize.find_by_node_number(parent_node)[:answer_or_question].downcase) #store question in array
       end
       current_node=parent_node
       parent_node=(parent_node/2.0).floor

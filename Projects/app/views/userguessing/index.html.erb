@@ -33,10 +33,13 @@
     </ul> 
   </div>
 
-  <%if @counter.to_i < 20 %>
-    <p>Correct!</p>
+  <%if(!session[:yes_questions].nil?) && (!params[:input].nil?)%>
+    <%if(session[:yes_questions].include?(params[:input].downcase))%> 
+      <p>Correct!</p>
+    <%else%>
+      <p>Incorrect!</p>
+    <%end%>
   <% end %>
-  
   <%if @counter.to_i > 0 %>
     <br>
     <p style="text-align: center; color: red;">You have <%="#{@counter}"%> questions left.</p>    
