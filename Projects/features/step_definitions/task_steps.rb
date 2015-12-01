@@ -36,6 +36,9 @@ Given /the following tasks are set up for user guess game/ do |task_table|
   end
 end
 
+And /I need to debug this/ do
+  debugger
+end
 
 Given /I have already started playing a game/ do
   steps %Q{

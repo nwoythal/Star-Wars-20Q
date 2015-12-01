@@ -14,6 +14,7 @@ describe UserguessingController do
   end  
 
   it 'Should check for guesses_left to be nil and set to 20 if such' do
+    expect(Bus).to receive(:grab_object).and_return(["Obi Wan?", "Starthing", 2])
     get :index, {:guesses_left => nil}
     expect(@counter) == 20
     expect(session[:guesses_left]) == (@counter)
@@ -28,4 +29,5 @@ describe UserguessingController do
     get :index, { :usrguess_obj => 'nil' }
     expect(session[:usrguess_obj]).not_to eq(nil)
   end
+ Place.delete_all
 end

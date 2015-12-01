@@ -34,4 +34,5 @@ describe Randomquestion do
       expect(Randomquestion.update_list_of_already_picked_questions([5, 6, 7], 8)).to eq([5, 6, 7, 8])
     end
   end
+
 end

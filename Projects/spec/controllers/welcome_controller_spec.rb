@@ -5,4 +5,5 @@ describe WelcomeController do
     get :index
     expect(:guesses_left) == nil
   end
+
 end
