@@ -42,13 +42,14 @@
     <p style="text-align: center; color: red;">You have <%="#{@counter}"%> questions left.</p>    
       </center>
       <p>Enter your question below</p>
-      <%=form_tag :controller => '/userguessing', :method => :get, :action => 'index'%>
-      <div id=textField>
-        <%= text_field_tag 'ask', @question=nil , :id => 'ask_field', :placeholder => 'Ask me a question!', size: '50'%>
-      </div>
-      <br>
-      <br>
-      <%= submit_tag "Ask question", :name => nil, :class => 'button'%>
+      <%=form_tag(getinfo_path, :method => :get) do %>
+        <div id=textField>
+          <%= text_field_tag "input", nil , :id => 'ask_field', :placeholder => 'Ask me a question!', size: '50'%>
+        </div>
+       <br>
+       <br>
+       <%= submit_tag "Ask question", :class => 'button'%>
+      <% end %>
       <h3 style="text-align: center">OR</h3>
       <%= link_to "Guess answer", show_path(), :class=>'button'%>
     

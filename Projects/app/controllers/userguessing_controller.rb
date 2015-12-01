@@ -1,13 +1,13 @@
 class UserguessingController < ApplicationController
   def index
     # all calls to the database must go through the bus class
-    params[:ask]=@question
+    @input = params[:input]
     if session[:usrguess_obj].nil? && session[:yes_questions].nil?
       session[:usrguess_obj]=Bus.grab_object()
       session[:yes_questions]=Bus.find_yes_questions(session[:usrguess_obj][1], session[:usrguess_obj][2])
       session[:usrguess_obj]=session[:usrguess_obj][0] #set to answer
     end
-
+    debugger
     if session[:guesses_left].nil?
       @counter=session[:guesses_left]=20 #set counter
     elsif session[:guesses_left]>=1
@@ -15,6 +15,7 @@ class UserguessingController < ApplicationController
     elsif session[:guesses_left]<1
       redirect_to show_path()
     end
+
   end
 
   def create #Here as an alias

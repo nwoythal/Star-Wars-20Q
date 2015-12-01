@@ -5,7 +5,7 @@ ProjectManager::Application.routes.draw do
   resources :userguessing
   resources :welcome
   root :to => redirect('/welcome')
-
+  get '/userguessing', to: 'userguessing#getinfo', as: :getinfo
   get '/userguessing/show', to: 'userguessing#show', as: :show
   post'/userguessing/show/final_guess', to: 'userguessing#final_guess', as: :final_guess
 
