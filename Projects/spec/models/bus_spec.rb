@@ -141,14 +141,6 @@ describe Bus do
       expect(Bus.get_category('16')).to eq('sentient')
     end
   end
-  
-  describe 'grab_object' do
-    it 'should return a random number' do
-      #Force seed to test result
-      srand(50)
-      expect(Bus.grab_object).to eq(["Obi Wan?", "Starthing", 2])
-    end
-  end
 
   describe 'find_yes_questions' do
     it 'should select the correct category' do
@@ -158,8 +150,8 @@ describe Bus do
       expect(Bus.find_yes_questions('built', 1)).to eq(['Is it a Building?'])
       expect(Bus.find_yes_questions('animal', 1)).to eq(['Is it an Animal?'])
       expect(Bus.find_yes_questions('cyborg', 1)).to eq(['Is it a Cyborg?'])
-      expect(Bus.find_yes_questions('empire', 1)).to eq(['Is it part of the Galactic Empire?'])
-      expect(Bus.find_yes_questions('rebel', 1)).to eq(['Is it a Rebel?'])
+      expect(Bus.find_yes_questions('empire', 1)).to eq(['Is it a part of the Galactic Empire?'])
+      expect(Bus.find_yes_questions('rebel', 1)).to eq(['Is it a part of the Rebel Alliance?'])
       expect(Bus.find_yes_questions('jedi', 1)).to eq(['Is it a Jedi?'])
       expect(Bus.find_yes_questions('sith', 1)).to eq(['Is it a Sith?'])
       expect(Bus.find_yes_questions('senator', 1)).to eq(['Is it a Senator?'])
