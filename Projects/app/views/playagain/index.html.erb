@@ -47,7 +47,7 @@
       <%="#{@valid}"%>
     </h2>
     <h2>
-      The computer was thinking of: <%="#{@answer}"%>
+      The computer was thinking of: <%="#{@answer}".split.map(&:capitalize).join(' ')%> <!--method calls are here because it didnt work in the controller, not sure why-->
     </h2>
     <h2>
       Your Guess: <%="#{@guess}"%>
