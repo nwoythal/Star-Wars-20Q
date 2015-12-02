@@ -1,16 +1,10 @@
-sentients = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Jedi?', :node_number => 1},
+persons = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Jedi?', :node_number => 1},
            {:what_am_i => 'Redirect', :answer_or_question => 9, :node_number => 2},
            {:what_am_i => 'Question', :answer_or_question => 'Is it a Sith?', :node_number => 3},
            {:what_am_i => 'Redirect', :answer_or_question => 10, :node_number => 6},
            {:what_am_i => 'Question', :answer_or_question => 'Is it a Clone?', :node_number => 7},
            {:what_am_i => 'Redirect', :answer_or_question => 13, :node_number => 14},
-           {:what_am_i => 'Question', :answer_or_question => 'Is it an Senator?', :node_number => 15},
-           {:what_am_i => 'Redirect', :answer_or_question => 11, :node_number => 30},
-           {:what_am_i => 'Question', :answer_or_question => 'Is it a Rebel?', :node_number => 31},
-           {:what_am_i => 'Redirect', :answer_or_question => 8, :node_number => 62},
-           {:what_am_i => 'Question', :answer_or_question => 'Is it a Cyborg?', :node_number => 63},
-           {:what_am_i => 'Redirect', :answer_or_question => 6, :node_number => 126},
-            {:what_am_i => 'Redirect', :answer_or_question => 16, :node_number => 127}]
+            {:what_am_i => 'Redirect', :answer_or_question => 16, :node_number => 15}]
 
 places = [{:what_am_i => 'Question', :answer_or_question => 'Is it a ringed planet?', :node_number => 1},
           {:what_am_i => 'Question', :answer_or_question => 'Are there towering spire-hives on this planet?', :node_number => 2},
@@ -103,7 +97,7 @@ alives = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Person?', :
           {:what_am_i => 'Redirect', :answer_or_question => 7, :node_number => 6},
           {:what_am_i => 'Answer', :answer_or_question => 'alive', :node_number => 7}]
 
-persons = [ {:what_am_i => 'Question', :answer_or_question => 'Is it part of the principal cast?', :node_number => 1},
+sentients = [ {:what_am_i => 'Question', :answer_or_question => 'Is it part of the principal cast?', :node_number => 1},
         {:what_am_i => 'Question', :answer_or_question => "Is its\' adult version played by the same actor every time?", :node_number => 2},
         {:what_am_i => 'Question', :answer_or_question => 'Is it a Jedi Knight?', :node_number => 3},
         {:what_am_i => 'Question', :answer_or_question => 'Is it a droid/robot?', :node_number => 4},
@@ -1807,7 +1801,7 @@ machines = [{:what_am_i => 'Question', :answer_or_question => 'Is it a Spacecraf
             {:what_am_i => 'Answer', :answer_or_question => 'V-Wing Airspeeder', :node_number => 231},
            ]
 
-moons = [{:what_am_i => 'Answer', :answer_or_question => 'Moons', :node_number => 1}]
+moons = [{:what_am_i => 'Answer', :answer_or_question => 'Endor', :node_number => 1}]
 
 jedis = [{:what_am_i => 'Question', :answer_or_question => 'Is this Jedi a Male?', :node_number => 1},
          {:what_am_i => 'Question', :answer_or_question => 'Did he fight in the Clone Wars?', :node_number => 2},
@@ -1865,14 +1859,14 @@ jedis = [{:what_am_i => 'Question', :answer_or_question => 'Is this Jedi a Male?
          {:what_am_i => 'Answer', :answer_or_question => 'Bultar Swan', :node_number => 255},
          {:what_am_i => 'Question', :answer_or_question => 'Was she trained by Anakin Skywalker?', :node_number => 6}]
 
-questions = [{:what_am_i => 'Question', :answer_or_question => 'Is it a charater from the Movies?', :node_number => 1},
+questions = [{:what_am_i => 'Question', :answer_or_question => 'Is it a character from the Movies?', :node_number => 1},
              {:what_am_i => 'Question', :answer_or_question => 'Is it a Place?', :node_number => 2},
              {:what_am_i => 'Question', :answer_or_question => 'Is it an Object?', :node_number => 3},
              {:what_am_i => 'Question', :answer_or_question => 'Is it a Building?', :node_number => 4},
              {:what_am_i => 'Question', :answer_or_question => 'Is it an Animal?', :node_number => 5},
              {:what_am_i => 'Question', :answer_or_question => 'Is it a Cyborg?', :node_number => 6},
-             {:what_am_i => 'Question', :answer_or_question => 'Is it part of the Galactic Empire?', :node_number => 7},
-             {:what_am_i => 'Question', :answer_or_question => 'Is it a Rebel?', :node_number => 8},
+             {:what_am_i => 'Question', :answer_or_question => 'Is it a part of the Galactic Empire?', :node_number => 7},
+             {:what_am_i => 'Question', :answer_or_question => 'Is it a part of the Rebel Alliance?', :node_number => 8},
              {:what_am_i => 'Question', :answer_or_question => 'Is it a Jedi?', :node_number => 9},
              {:what_am_i => 'Question', :answer_or_question => 'Is it a Sith?', :node_number => 10},
              {:what_am_i => 'Question', :answer_or_question => 'Is it a Senator?', :node_number => 11},

@@ -215,7 +215,7 @@ class Bus
   end 
 
   def self.grab_object()
-    category=get_category(rand(1..15).to_s).capitalize.constantize
+    category=get_category(rand(2..15).to_s).capitalize.constantize
     node_number=1
     while(category.find_by_node_number(node_number)[:what_am_i]!="Answer")
       node_number=(node_number*2)+rand(0..1)
@@ -251,9 +251,9 @@ class Bus
       when "cyborg"
         list_of_questions.push("Is it a Cyborg?")
       when "empire"
-        list_of_questions.push("Is it part of the Galactic Empire?")
+        list_of_questions.push("Is it a part of the Galactic Empire?")
       when "rebel"
-        list_of_questions.push("Is it a Rebel?")
+        list_of_questions.push("Is it a part of the Rebel Alliance?")
       when "jedi"
         list_of_questions.push("Is it a Jedi?")
       when "sith"

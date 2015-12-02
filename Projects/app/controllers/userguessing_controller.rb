@@ -38,14 +38,7 @@ class UserguessingController < ApplicationController
   end
 
   def final_guess
-    guess = params[:guess]
-
-    if guess.to_s.downcase.gsub(/[^0-9a-z]/i,'') == session[:usrguess_obj].to_s.downcase.gsub(/[^0-9a-z]/i,'') #remove punctuation & check
-      valid = 'Correct!'
-    else
-      valid = 'Incorrect!'
-    end
-    redirect_to :action => 'index', :controller =>'playagain', :answer=> session[:usrguess_obj].to_s, :game=>'userguessing', :guess => params[:guess], :valid => valid
+    redirect_to :action => 'index', :controller =>'playagain', :answer=> session[:usrguess_obj].to_s, :game=>'userguessing', :guess => params[:guess]
   end
 
 end
