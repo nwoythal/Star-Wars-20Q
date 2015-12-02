@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-02T09:04:25-07:00">2015-12-02T09:04:25-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-02T09:06:23-07:00">2015-12-02T09:06:23-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.53
+         5.71
        </span>
     </span> hits/line)
   </h2>
@@ -157,7 +157,7 @@
         <td>129</td>
         <td>128</td>
         <td>1</td>
-        <td>4.3</td>
+        <td>4.7</td>
       </tr>
       
       <tr>
@@ -440,7 +440,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.38
+         4.62
        </span>
     </span> hits/line)
   </h2>
@@ -502,7 +502,7 @@
         <td>129</td>
         <td>128</td>
         <td>1</td>
-        <td>4.3</td>
+        <td>4.7</td>
       </tr>
       
       <tr>
@@ -3370,8 +3370,8 @@
           <code class="ruby">      when &quot;9&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="199">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="199">
+          <span class="hits">1</span>
           
           <code class="ruby">        return &quot;jedi&quot;</code>
         </li>
@@ -3394,8 +3394,8 @@
           <code class="ruby">      when &quot;11&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="203">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="203">
+          <span class="hits">2</span>
           
           <code class="ruby">        return &quot;senator&quot;</code>
         </li>
@@ -3496,20 +3496,20 @@
           <code class="ruby">    node_number=1</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="220">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="26" data-linenumber="220">
+          <span class="hits">26</span>
           
           <code class="ruby">    while(category.find_by_node_number(node_number)[:what_am_i]!=&quot;Answer&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="221">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="14" data-linenumber="221">
+          <span class="hits">14</span>
           
           <code class="ruby">      node_number=(node_number*2)+rand(0..1)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="222">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="14" data-linenumber="222">
+          <span class="hits">14</span>
           
           <code class="ruby">      if(category.find_by_node_number(node_number)[:what_am_i]==&#39;Redirect&#39;)</code>
         </li>
@@ -3568,20 +3568,20 @@
           <code class="ruby">    parent_node=(current_node/2.0).floor #2.0, just in case of truncation error</code>
         </li>
       
-        <li class="covered" data-hits="51" data-linenumber="232">
-          <span class="hits">51</span>
+        <li class="covered" data-hits="59" data-linenumber="232">
+          <span class="hits">59</span>
           
           <code class="ruby">    while(parent_node&gt;=1) #ends at 1 for now</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="233">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="15" data-linenumber="233">
+          <span class="hits">15</span>
           
           <code class="ruby">      if (parent_node*2)==current_node #we know the answer is yes</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="234">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="234">
+          <span class="hits">7</span>
           
           <code class="ruby">        list_of_questions.push(category.constantize.find_by_node_number(parent_node)[:answer_or_question].downcase) #store question in array</code>
         </li>
@@ -3592,14 +3592,14 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="236">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="15" data-linenumber="236">
+          <span class="hits">15</span>
           
           <code class="ruby">      current_node=parent_node</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="237">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="15" data-linenumber="237">
+          <span class="hits">15</span>
           
           <code class="ruby">      parent_node=(parent_node/2.0).floor</code>
         </li>
@@ -3724,8 +3724,8 @@
           <code class="ruby">      when &quot;jedi&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="258">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="258">
+          <span class="hits">1</span>
           
           <code class="ruby">        list_of_questions.push(&quot;Is it a Jedi?&quot;)</code>
         </li>
@@ -3748,8 +3748,8 @@
           <code class="ruby">      when &quot;senator&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="262">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="262">
+          <span class="hits">2</span>
           
           <code class="ruby">        list_of_questions.push(&quot;Is it a Senator?&quot;)</code>
         </li>
@@ -4276,8 +4276,8 @@
           <code class="ruby">      when 6</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="27">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="27">
+          <span class="hits">3</span>
           
           <code class="ruby">        return &quot;welcome/Han_solo.jpg&quot;</code>
         </li>
@@ -4384,8 +4384,8 @@
           <code class="ruby">      when 15</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="45">
+          <span class="hits">2</span>
           
           <code class="ruby">        return &quot;welcome/PrincessLeia1.jpg&quot;</code>
         </li>
@@ -4396,8 +4396,8 @@
           <code class="ruby">      when 16</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="47">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="47">
+          <span class="hits">2</span>
           
           <code class="ruby">        return &quot;welcome/R2d2.jpg&quot;</code>
         </li>
@@ -4480,8 +4480,8 @@
           <code class="ruby">      when 23</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="61">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="61">
+          <span class="hits">4</span>
           
           <code class="ruby">        return &quot;welcome/rsz_yodas_hover_chair.png&quot;</code>
         </li>
