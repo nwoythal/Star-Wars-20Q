@@ -85,6 +85,8 @@ describe Bus do
   describe 'get_pic_info' do
     it 'should remove spaces in names and make lowercase' do
       expect(Bus.get_pic_info("jedi",'Obi Wan')).to eq('jedi/obiwan')
+      expect(Bus.get_pic_info("clone", "Captain Rex")).to eq("clones/captainrex")
+      expect(Bus.get_pic_info("sith", "Darth Malgus")).to eq("siths/darthmalgus")
     end
   end
 
@@ -145,6 +147,26 @@ describe Bus do
       #Force seed to test result
       srand(50)
       expect(Bus.grab_object).to eq(["Obi Wan?", "Starthing", 2])
+    end
+  end
+
+  describe 'find_yes_questions' do
+    it 'should select the correct category' do
+      expect(Bus.find_yes_questions('starthing', 1)).to eq(['Is it a character from the Movies?'])
+      expect(Bus.find_yes_questions('place', 1)).to eq(['Is it a Place?'])
+      expect(Bus.find_yes_questions('starobject', 1)).to eq(['Is it an Object?'])
+      expect(Bus.find_yes_questions('built', 1)).to eq(['Is it a Building?'])
+      expect(Bus.find_yes_questions('animal', 1)).to eq(['Is it an Animal?'])
+      expect(Bus.find_yes_questions('cyborg', 1)).to eq(['Is it a Cyborg?'])
+      expect(Bus.find_yes_questions('empire', 1)).to eq(['Is it part of the Galactic Empire?'])
+      expect(Bus.find_yes_questions('rebel', 1)).to eq(['Is it a Rebel?'])
+      expect(Bus.find_yes_questions('jedi', 1)).to eq(['Is it a Jedi?'])
+      expect(Bus.find_yes_questions('sith', 1)).to eq(['Is it a Sith?'])
+      expect(Bus.find_yes_questions('senator', 1)).to eq(['Is it a Senator?'])
+      expect(Bus.find_yes_questions('weapon', 1)).to eq(['Is it a Weapon?'])
+      expect(Bus.find_yes_questions('clone', 1)).to eq(['Is it a Clone?'])
+      expect(Bus.find_yes_questions('machine', 1)).to eq(['Is it a Machine?'])
+      expect(Bus.find_yes_questions('moon', 1)).to eq(['Is it larger than a Moon?'])
     end
   end
 end

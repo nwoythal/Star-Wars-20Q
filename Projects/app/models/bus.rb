@@ -239,7 +239,7 @@ class Bus
     #also need root question
     case category.downcase
       when "starthing"
-        list_of_questions.push("Is it a charater from the Movies?")
+        list_of_questions.push("Is it a character from the Movies?")
       when "place"
         list_of_questions.push("Is it a Place?")
       when "starobject"
@@ -253,7 +253,7 @@ class Bus
       when "empire"
         list_of_questions.push("Is it part of the Galactic Empire?")
       when "rebel"
-        list_of_questions.push("Is it a Rebel")
+        list_of_questions.push("Is it a Rebel?")
       when "jedi"
         list_of_questions.push("Is it a Jedi?")
       when "sith"
