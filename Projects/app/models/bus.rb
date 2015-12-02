@@ -217,9 +217,12 @@ class Bus
   def self.grab_object()
     category=get_category(rand(2..15).to_s).capitalize.constantize
     node_number=1
+
     while(category.find_by_node_number(node_number)[:what_am_i]!="Answer")
       node_number=(node_number*2)+rand(0..1)
+      puts "#{category} #{node_number}"
       if(category.find_by_node_number(node_number)[:what_am_i]=='Redirect')
+        puts "#{category} #{node_number} Redirect"
         node_number+=1
       end
     end
