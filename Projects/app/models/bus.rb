@@ -225,6 +225,54 @@ class Bus
     end
     return [category.find_by_node_number(node_number)[:answer_or_question], category.to_s, node_number] #return array
   end
+
+  
+  def self.find_yes_questions(category, current_node)
+    list_of_questions=[]
+    parent_node=(current_node/2.0).floor #2.0, just in case of truncation error
+    while(parent_node>=1) #ends at 1 for now
+      if (parent_node*2)==current_node #we know the answer is yes
+        list_of_questions.push(category.constantize.find_by_node_number(parent_node)[:answer_or_question].downcase) #store question in array
+      end
+      current_node=parent_node
+      parent_node=(parent_node/2.0).floor
+    end
+    #also need root question
+    case category.downcase
+      when "starthing"
+        list_of_questions.push("Is it a character from the Movies?")
+      when "place"
+        list_of_questions.push("Is it a Place?")
+      when "starobject"
+        list_of_questions.push("Is it an Object?")
+      when "built"
+        list_of_questions.push("Is it a Building?")
+      when "animal"
+        list_of_questions.push("Is it an Animal?")
+      when "cyborg"
+        list_of_questions.push("Is it a Cyborg?")
+      when "empire"
+        list_of_questions.push("Is it a part of the Galactic Empire?")
+      when "rebel"
+        list_of_questions.push("Is it a part of the Rebel Alliance?")
+      when "jedi"
+        list_of_questions.push("Is it a Jedi?")
+      when "sith"
+        list_of_questions.push("Is it a Sith?")
+      when "senator"
+        list_of_questions.push("Is it a Senator?")
+      when "weapon"
+        list_of_questions.push("Is it a Weapon?")
+      when "clone"
+        list_of_questions.push("Is it a Clone?")
+      when "machine"
+        list_of_questions.push("Is it a Machine?")
+      when "moon"
+        list_of_questions.push("Is it larger than a Moon?")
+    end
+    return list_of_questions;
+  end
+
   #
   # def self.grab_object_test2()
   #   category=get_category(2.to_s).capitalize.constantize
@@ -436,52 +484,4 @@ class Bus
   #   end
   #   return [category.find_by_node_number(node_number)[:answer_or_question], category.to_s, node_number] #return array
   # end
-  
-  def self.find_yes_questions(category, current_node)
-    list_of_questions=[]
-    parent_node=(current_node/2.0).floor #2.0, just in case of truncation error
-    while(parent_node>=1) #ends at 1 for now
-      if (parent_node*2)==current_node #we know the answer is yes
-        list_of_questions.push(category.constantize.find_by_node_number(parent_node)[:answer_or_question].downcase) #store question in array
-      end
-      current_node=parent_node
-      parent_node=(parent_node/2.0).floor
-    end
-    #also need root question
-    case category.downcase
-      when "starthing"
-        list_of_questions.push("Is it a character from the Movies?")
-      when "place"
-        list_of_questions.push("Is it a Place?")
-      when "starobject"
-        list_of_questions.push("Is it an Object?")
-      when "built"
-        list_of_questions.push("Is it a Building?")
-      when "animal"
-        list_of_questions.push("Is it an Animal?")
-      when "cyborg"
-        list_of_questions.push("Is it a Cyborg?")
-      when "empire"
-        list_of_questions.push("Is it a part of the Galactic Empire?")
-      when "rebel"
-        list_of_questions.push("Is it a part of the Rebel Alliance?")
-      when "jedi"
-        list_of_questions.push("Is it a Jedi?")
-      when "sith"
-        list_of_questions.push("Is it a Sith?")
-      when "senator"
-        list_of_questions.push("Is it a Senator?")
-      when "weapon"
-        list_of_questions.push("Is it a Weapon?")
-      when "clone"
-        list_of_questions.push("Is it a Clone?")
-      when "machine"
-        list_of_questions.push("Is it a Machine?")
-      when "moon"
-        list_of_questions.push("Is it larger than a Moon?")
-    end
-    return list_of_questions;
-  end
-
-
 end
