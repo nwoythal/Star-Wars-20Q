@@ -70,11 +70,11 @@
 #     Bus.grab_object_test15
 #     i += 1
 #   end
-  i = 0
-  # while i <= 100000 do
-  #   Bus.grab_object_test16
-  #   i += 1
-  # end
+#   i = 0
+#   while i <= 100000 do
+#     Bus.grab_object_test16
+#     i += 1
+#   end
 #   i = 0
 #   while i <= 10000 do
 #     Bus.grab_object
