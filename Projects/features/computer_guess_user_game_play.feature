@@ -10,6 +10,8 @@ Feature: As a User I want the computer to guess what I am thinking.
       | what_am_i | answer_or_question | node_number |
       | Question  | Are you a Person?  | 1           |
       | Question  | Are you a Person?  | 2           |
+      | Question  | Are you a Person?  | 3           |
+      | Question  | Are you a Person?  | 4           |
 
     Given the following tasks are set up for user guess game:
       | what_am_i | answer_or_question | node_number |
