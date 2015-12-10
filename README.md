@@ -1,4 +1,4 @@
-# Star-Wars-20Q
+# Star Wars 20 Questions
 This is an assignment in learning about Software as a Service, the agile development life cycle, and automated testing (in both BDD and TDD). Check the gemfile for dependencies.
 
 Rules:
